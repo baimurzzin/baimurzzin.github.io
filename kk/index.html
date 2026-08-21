@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Рахим Баймурзин</title>
+<meta name="description" content="Рахим Баймурзин — математик және бағдарламашы. Түйіндеме, марапаттар, зерттеу және байланыс.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101211" media="(prefers-color-scheme: dark)">
+<link rel="alternate" hreflang="en" href="../">
+<link rel="alternate" hreflang="ru" href="../ru/">
+<link rel="alternate" hreflang="kk" href="../kk/">
+<link rel="alternate" hreflang="x-default" href="../">
+<link rel="stylesheet" href="../fonts/press-start-2p.css">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13' font-family='monospace'>R</text></svg>">
+<!-- generated from content.toml by build.py — do not edit by hand -->
+<script>
+// Applied before first paint so a chosen theme never flashes the other one.
+try {
+  var th = localStorage.getItem('theme');
+  if (th === 'light' || th === 'dark') document.documentElement.setAttribute('data-theme', th);
+} catch (e) {}
+</script>
+</head>
+<body>
+
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<header class="bar">
+  <div class="bar-inner">
+    <nav class="langs" aria-label="language">
+      <ul>
+        <li><a href="../" hreflang="en" lang="en" title="English">EN</a></li>
+        <li><a href="../ru/" hreflang="ru" lang="ru" title="Русский">RU</a></li>
+        <li><span aria-current="page">KK</span></li>
+      </ul>
+    </nav>
+    <div class="controls">
+      <button type="button" id="font-btn" class="ctl ctl-btn"
+              aria-label="қаріп">
+        <svg class="icon icon-a-round" viewBox="0 0 7 7" aria-hidden="true">
+          <!-- smooth 'A' — shown while the pixel face is on -->
+          <path d="M3.5 1c-.52 0-.94.32-1.11.82L1 6h1.06l.46-1.4h1.96L4.94 6H6L4.61 1.82C4.44 1.32 4.02 1 3.5 1zm0 1.15.63 1.62H2.87z"/>
+        </svg>
+        <svg class="icon icon-a-pixel" viewBox="0 0 7 7" aria-hidden="true">
+          <!-- pixel 'A' — shown while the smooth face is on -->
+          <path d="M2 1h3v1H2zM1 2h1v5H1zM5 2h1v5H5zM2 4h3v1H2z"/>
+        </svg>
+      </button>
+      <button type="button" id="bg-btn" class="ctl ctl-btn"
+              aria-label="фон" aria-pressed="true">
+        <canvas id="bg-icon" width="13" height="13" aria-hidden="true"></canvas>
+      </button>
+      <button type="button" id="theme-btn" class="ctl ctl-btn"
+              aria-label="тақырып">
+        <svg class="icon icon-sun" viewBox="0 0 9 9" aria-hidden="true">
+          <!-- pixel sun -->
+          <path d="M3 3h3v3H3zM4 0h1v2H4zM4 7h1v2H4zM0 4h2v1H0zM7 4h2v1H7zM1 1h1v1H1zM7 1h1v1H7zM1 7h1v1H1zM7 7h1v1H7z"/>
+        </svg>
+        <svg class="icon icon-moon" viewBox="0 0 9 9" aria-hidden="true">
+          <!-- pixel crescent -->
+          <path d="M3 1h3v1H3zM2 2h1v1H2zM1 3h1v3H1zM2 6h1v1H2zM3 7h3v1H3zM6 6h1v1H6zM4 2h3v1H4zM3 3h2v3H3zM4 6h3v1H4z" fill-opacity="0"/>
+          <path d="M5 0a4.5 4.5 0 1 0 3 8 5 5 0 0 1-3-8z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+<nav class="toc" id="toc" aria-label="Мазмұны">
+  <details id="toc-details">
+    <summary>Мазмұны</summary>
+    <ul>
+      <li class="d1"><a href="#profile"><span class="n">1</span> <span class="l">Рахим Баймурзин</span></a></li>
+      <li class="d2"><a href="#about"><span class="n">1.1</span> <span class="l">өзім туралы</span></a></li>
+      <li class="d2"><a href="#links"><span class="n">1.2</span> <span class="l">сілтемелер</span></a></li>
+      <li class="d1"><a href="#honors"><span class="n">2</span> <span class="l">Марапаттар</span></a></li>
+      <li class="d2"><a href="#honors-math"><span class="n">2.1</span> <span class="l">математика және бағдарламалау</span></a></li>
+      <li class="d2"><a href="#honors-other"><span class="n">2.2</span> <span class="l">басқасы</span></a></li>
+      <li class="d1"><a href="#education"><span class="n">3</span> <span class="l">Білім</span></a></li>
+      <li class="d2"><a href="#masters"><span class="n">3.1</span> <span class="l">магистратура</span></a></li>
+      <li class="d2"><a href="#bachelors"><span class="n">3.2</span> <span class="l">бакалавриат</span></a></li>
+      <li class="d2"><a href="#highschool"><span class="n">3.3</span> <span class="l">мектеп</span></a></li>
+      <li class="d1"><a href="#experience"><span class="n">4</span> <span class="l">Тәжірибе</span></a></li>
+      <li class="d2"><a href="#work"><span class="n">4.1</span> <span class="l">жұмыс тәжірибесі</span></a></li>
+      <li class="d3"><a href="#desargues"><span class="n">4.1a</span> <span class="l">desargues ai</span></a></li>
+      <li class="d3"><a href="#higgsfield"><span class="n">4.1b</span> <span class="l">higgsfield ai</span></a></li>
+      <li class="d3"><a href="#mercor"><span class="n">4.1c</span> <span class="l">mercor</span></a></li>
+      <li class="d3"><a href="#olympiads"><span class="n">4.1d</span> <span class="l">олимпиадалар</span></a></li>
+      <li class="d2"><a href="#academic"><span class="n">4.2</span> <span class="l">академиялық тәжірибе</span></a></li>
+      <li class="d3"><a href="#nu-academic"><span class="n">4.2a</span> <span class="l">TA / RA</span></a></li>
+      <li class="d3"><a href="#flt"><span class="n">4.2b</span> <span class="l">FLT практикумы</span></a></li>
+      <li class="d2"><a href="#other"><span class="n">4.3</span> <span class="l">басқа тәжірибе</span></a></li>
+      <li class="d2"><a href="#coursework"><span class="n">4.4</span> <span class="l">таңдаулы курстар</span></a></li>
+    </ul>
+  </details>
+</nav>
+
+<main>
+
+<section class="chapter" id="profile">
+  <div class="head">
+    <h1><span class="n">1</span> Рахим Баймурзин</h1>
+    <p class="subtitle">[Математик / Бағдарламашы]</p>
+  </div>
+  <section class="sub" id="about">
+    <h3><span class="n">1.1</span> өзім туралы</h3>
+    <p>сәлем! менің атым Рахим, өнеркәсіптік <strong><span class="ac ac-past">Қарағанды</span></strong> қаласынанмын. қазір <strong><span class="ac ac-here">Астанада, Қазақстанда</span></strong> тұрамын. ағылшынша, орысша және қазақша сөйлеймін. мен IMO медалистімін, аздап AI/ML-мен, сәл бағдарламалаумен және мүлдем аздап зерттеу математикасымен айналысамын.</p>
+  </section>
+  <section class="sub" id="links">
+    <h3><span class="n">1.2</span> сілтемелер</h3>
+    <ul class="links">
+      <li><a href="../cv/cv-kk.pdf">cv.pdf</a></li>
+      <li><a href="https://t.me/baimurzzin" class="lk lk-telegram">telegram</a></li>
+      <li><a href="https://www.linkedin.com/in/baimurzzin" class="lk lk-linkedin">linkedin</a></li>
+      <li><a href="https://github.com/baimurzzin">github</a></li>
+    </ul>
+  </section>
+</section>
+
+<section class="chapter" id="honors">
+  <h2><span class="n">2</span> Марапаттар</h2>
+  <section class="sub" id="honors-math">
+    <h3><span class="n">2.1</span> математика және бағдарламалау</h3>
+    <ul class="plain">
+      <li class="has-sub">
+        <span class="lead" tabindex="0" role="button" aria-expanded="false"><span class="label">IMO 2021 — <span class="medal m-bronze">қола</span></span><span class="cue" aria-hidden="true"></span></span>
+        <div class="sub-wrap"><ul>
+          <li>Республикалық математика олимпиадасы 2021 — <span class="medal m-silver">күміс</span></li>
+          <li>Республикалық математика олимпиадасы 2022 — <span class="medal m-silver">күміс</span></li>
+        </ul></div>
+      </li>
+      <li>Балқан МО 2021 — <span class="medal m-bronze">қола</span></li>
+      <li>Жәутіков олимпиадасы 2021 — <span class="medal m-silver">күміс</span></li>
+      <li>APMO 2022 — <span class="medal m-bronze">қола</span></li>
+      <li class="has-sub">
+        <span class="lead" tabindex="0" role="button" aria-expanded="false"><span class="label">ICPC NEF (жартылай финал) 2025 — <span class="medal m-hm">мадақтама</span></span><span class="cue" aria-hidden="true"></span></span>
+        <div class="sub-wrap"><ul>
+          <li>ICPC Kazakhstan Regional Contest (ширек финал) 2025 — <span class="medal m-gold">I дәрежелі диплом</span></li>
+          <li>ICPC Kazakhstan Regional Contest (ширек финал) 2024 — <span class="medal m-silver">II дәрежелі диплом</span></li>
+        </ul></div>
+      </li>
+      <li class="has-sub">
+        <span class="lead" tabindex="0" role="button" aria-expanded="false"><span class="label">IMC 2026 — <span class="medal m-silver">күміс</span></span><span class="cue" aria-hidden="true"></span></span>
+        <div class="sub-wrap"><ul>
+          <li>Республикалық студенттік математика олимпиадасы 2026 — <span class="medal m-gold">гран-при, абсолютті жеңімпаз (1/44)</span></li>
+          <li>Республикалық студенттік математика олимпиадасы 2025 — <span class="medal m-silver">күміс</span></li>
+        </ul></div>
+      </li>
+    </ul>
+  </section>
+  <section class="sub" id="honors-other">
+    <h3><span class="n">2.2</span> басқасы</h3>
+    <ul class="plain">
+      <li>Республикалық ғылыми жобалар байқауы 2022 — <span class="medal m-bronze">қола</span></li>
+      <li class="has-sub">
+        <span class="lead" tabindex="0" role="button" aria-expanded="false"><span class="label">MBZUAI K2 Think International Hackathon 2025 — <span class="medal m-gold">абсолютті жеңімпаз (1/900)</span></span><span class="cue" aria-hidden="true"></span></span>
+        <div class="sub-wrap"><ul>
+          <li>16 офлайн финалистің арасында Ivy League, MIT және DeepMind командалары болды</li>
+        </ul></div>
+      </li>
+      <li>KAIST E5 Global Start-up Fair 2026 — <span class="medal m-silver">екінші орын (2/40)</span></li>
+    </ul>
+  </section>
+</section>
+
+<section class="chapter" id="education">
+  <h2><span class="n">3</span> Білім</h2>
+  <section class="sub" id="masters">
+    <h3><span class="n">3.1</span> магистратура</h3>
+    <div class="entry" id="masters-1">
+      <h4>Назарбаев Университеті</h4>
+      <p class="meta"><span class="role">қолданбалы математика магистрі</span><span>2026 – 2028</span></p>
+    </div>
+  </section>
+  <section class="sub" id="bachelors">
+    <h3><span class="n">3.2</span> бакалавриат</h3>
+    <div class="entry" id="bachelors-1">
+      <h4><span class="ac ac-org">Nazarbayev University</span></h4>
+      <p class="meta"><span class="role">математика бакалавры — GPA = π + ε (ε ≈ 0.07)</span><span>2022 – 2026</span></p>
+    </div>
+  </section>
+  <section class="sub" id="highschool">
+    <h3><span class="n">3.3</span> мектеп</h3>
+    <div class="entry" id="highschool-1">
+      <h4><span class="ac ac-nis">Назарбаев Зияткерлік мектебі</span>, <span class="ac ac-past">Қарағанды</span></h4>
+      <p class="meta"><span class="role">аттестат — GPA 3.75, ҰБТ 138/140</span><span>2016 – 2022</span></p>
+      <ul>
+        <li>Мектеп тарихындағы алғашқы ISO медалисі.</li>
+      </ul>
+    </div>
+  </section>
+</section>
+
+<section class="chapter" id="experience">
+  <h2><span class="n">4</span> Тәжірибе</h2>
+  <section class="sub" id="work">
+    <h3><span class="n">4.1</span> жұмыс тәжірибесі</h3>
+    <div class="entry" id="desargues">
+      <h4><span class="ac ac-past">Desargues AI</span> — құрылтайшы</h4>
+      <p class="meta"><span class="role">Астана, Қазақстан</span><span>ақп 2026 – қазір</span></p>
+      <ul>
+        <li>Жасанды математикалық суперинтеллект жасап жатырмын.</li>
+      </ul>
+    </div>
+    <div class="entry" id="higgsfield">
+      <h4><span class="ac ac-hf">Higgsfield AI</span> — ML инженері</h4>
+      <p class="meta"><span class="role">Алматы, Қазақстан</span><span>қыр 2025 – ақп 2026</span></p>
+      <ul>
+        <li>Датасеттер жинап, ЖИ жасаған және нақты кескіндерді ажырататын өнімдік классификаторлар жасадым.</li>
+      </ul>
+    </div>
+    <div class="entry" id="mercor">
+      <h4><span class="ac ac-mercor">Mercor AI Lab</span> — IMO және математикалық зерттеулер сарапшысы / дерек авторы</h4>
+      <p class="meta"><span class="role">қашықтан</span><span>2025</span></p>
+      <ul>
+        <li>FrontierMath рейтингіндегі ең мықты модельді құру үшін деректер жинап, олардың математикалық сапасын бағаладым.</li>
+      </ul>
+    </div>
+    <div class="entry" id="olympiads">
+      <h4>Математика олимпиадалары — математика жаттықтырушысы, жиын ұйымдастырушысы, қазы, есеп авторы</h4>
+      <p class="meta"><span class="role">Қазақстан</span><span>2021 – қазір</span></p>
+      <ul>
+        <li>Ұлттық IMO құрамасы үшін бірнеше жаттығу жиынын өткіздім.</li>
+        <li>4 оқушыны бастапқы деңгейден халықаралық медаль деңгейіне дейін дайындадым.</li>
+        <li>20-дан астам аймақтық, республикалық және халықаралық олимпиадада қазы әрі ұйымдастырушы болдым.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="sub" id="academic">
+    <h3><span class="n">4.2</span> академиялық тәжірибе</h3>
+    <div class="entry" id="nu-academic">
+      <h4><span class="ac ac-org">Nazarbayev University</span></h4>
+      <p class="meta"><span class="role">Астана, Қазақстан</span><span>2024 – 2026</span></p>
+      <div class="role-block" id="ta-micro">
+        <p class="role-line"><span class="name">микроэкономика бойынша оқытушы көмекшісі</span><span>күз 2024</span></p>
+        <ul>
+          <li>Семинарлар жүргізіп, студенттердің емтиханға дайындалуына көмектестім.</li>
+        </ul>
+      </div>
+      <div class="role-block" id="ra">
+        <p class="role-line"><span class="name">математика бойынша ғылыми көмекші</span><span>күз 2025</span></p>
+        <ul>
+          <li>Рустем Таханов және Жеңісбек Асылбеков профессорлармен бірге үлестірімдердің келісім критерийлері бойынша жұмыс істедім. Критерийлердің қуатын өлшеу үшін таңдамалы үлестірімдерді құрадым.</li>
+        </ul>
+      </div>
+      <div class="role-block" id="thesis">
+        <p class="role-line"><span class="name">бакалавриат зерттеушісі</span><span>көктем 2026</span></p>
+        <ul>
+          <li>Профессор Адильбек Каиржанның жетекшілігімен дисперсиялық дербес туындылы теңдеулер бойынша дипломдық жұмыс жаздым.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="entry" id="flt">
+      <h4><span class="ac ac-icl">Imperial College London</span> — математиканы формализациялау сарапшысы (LEAN)</h4>
+      <p class="meta"><span class="role">Лондон, Ұлыбритания</span><span>шілде 2026</span></p>
+      <ul>
+        <li>Кевин Баззард өткізген Ферманың ұлы теоремасын формализациялау практикумына қатыстым. Репрезентациялар теориясын формализацияладым.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="sub" id="other">
+    <h3><span class="n">4.3</span> басқа тәжірибе</h3>
+    <div class="entry" id="siam">
+      <h4><span class="ac ac-siam">NU SIAM</span> — мүше және математика өкілі</h4>
+      <p class="meta"><span class="role">Астана, Қазақстан</span><span>2022 – 2026</span></p>
+      <ul>
+        <li>Математикалық баяндамалар мен жарыстар ұйымдастырдым, соның ішінде Integration Bee, факультет талқылауларында математика студенттерінің атынан сөйледім.</li>
+        <li>1000-нан астам жазылушысы бар академиялық Telegram арнасын құрдым және жүргіземін.</li>
+      </ul>
+    </div>
+    <div class="entry" id="isaac">
+      <h4>15-ші ISAAC конгресі — ерікті</h4>
+      <p class="meta"><span class="role">Астана, Қазақстан</span><span>тамыз 2025</span></p>
+      <ul>
+        <li>Шетелдік қонақтарды алып жүрдім, сұхбаттар жүргіздім, семинарлар ұйымдастырып, оларға қатыстым.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="sub" id="coursework">
+    <h3><span class="n">4.4</span> таңдаулы курстар</h3>
+    <div class="cols">
+    <ul class="plain">
+      <li>MATH 417 — криптография</li>
+      <li>MATH 456 — Ли топтары және өкілдіктер</li>
+      <li>MATH 462 — жоғары деңгейлі сызықтық алгебра</li>
+      <li>MATH 465 — дифференциалдық геометрия</li>
+      <li>MATH 480 — комплекстік талдау</li>
+      <li>MATH 481 — PDE</li>
+      <li>MATH 499 — дипломдық жұмыс</li>
+      <li>MATH 510 — өлшемдер теориясы</li>
+      <li>MATH 602 — аналитикалық сандар теориясы</li>
+      <li>MATH 682 — функционалдық талдау</li>
+    </ul>
+    <ul class="plain">
+      <li>CSCI 371 — жоғары деңгейлі алгоритмдер</li>
+      <li>CSCI 390 — ЖИ</li>
+      <li>CSCI 594 — терең оқыту</li>
+      <li class="gap">ECON 498 — жалпы тепе-теңдік</li>
+      <li class="gap">CHEM 211 — органикалық химия I</li>
+      <li>CHEM 250 — дескриптивті бейорганикалық химия</li>
+      <li class="gap">MINE 402 — көмір өндіру</li>
+    </ul>
+    </div>
+  </section>
+</section>
+
+</main>
+</div>
+
+<script src="../site.js"></script>
+<script data-goatcounter="https://baimurzzin.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

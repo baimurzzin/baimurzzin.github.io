@@ -1,0 +1,262 @@
+%-------------------------
+% Резюме на LaTeX
+% Автор : адаптировано для Рахима Баймурзина
+% Сборка: tectonic cv-ru.tex   (или)  xelatex cv-ru.tex
+%          Нужен движок с поддержкой Unicode (XeTeX/LuaTeX).
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage{array}
+\usepackage{iftex}
+
+% Computer Modern Unicode — тот же рисунок шрифта, но с кириллицей.
+\usepackage{fontspec}
+\setmainfont{cmunrm.otf}[
+  BoldFont          = cmunbx.otf,
+  ItalicFont        = cmunti.otf,
+  BoldItalicFont    = cmunbi.otf,
+  SmallCapsFont     = cmunrm.otf,
+  SmallCapsFeatures = {Letters=SmallCaps},
+]
+
+\usepackage{polyglossia}
+\setmainlanguage{russian}
+\setotherlanguage{english}
+
+% Карта глифов для тегированного PDF: только pdfTeX, под XeTeX/LuaTeX пропускается.
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Макросы резюме
+%-------------------------
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  РЕЗЮМЕ НАЧИНАЕТСЯ ЗДЕСЬ  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Рахим Баймурзин} \\
+    Казахстан $|$
+    \href{mailto:baimurzzin@gmail.com}{\underline{baimurzzin@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/baimurzzin/}{\underline{linkedin}} $|$
+    tg: @baimurzzin
+\end{center}
+
+%-----------ОБРАЗОВАНИЕ-----------
+\section{Образование}
+\resumeSubHeadingListStart
+  % \resumeSubheading
+  %   {Назарбаев Интеллектуальная школа (НИШ)}{Караганда, Казахстан}
+  %   {Аттестат о среднем образовании, GPA 3.75, ЕНТ 138/140, первый в истории школы медалист ISO}{2016 -- 2022}
+  \resumeSubheading
+    {Назарбаев Университет}{Астана, Казахстан}
+    {Магистр прикладной математики}{2026 -- 2028}
+  \resumeSubheading
+    {Назарбаев Университет}{Астана, Казахстан}
+    {Бакалавр математики, GPA 3.21}{2022 -- 2026}
+\resumeSubHeadingListEnd
+
+%-----------НАГРАДЫ-----------
+\section{Награды и достижения}
+\resumeSubHeadingListStart
+  \item{\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.45\textwidth}@{\hspace{0.05\textwidth}}>{\raggedright\arraybackslash}p{0.45\textwidth}@{}}
+    \textbf{IMO 2021, бронза}                       & \textbf{Региональный Финалист ICPC (NEF)}\\
+    IMC 2026, серебро                               & Республиканская Студенческая МО 2026 (1/50)\\
+    MBZUAI K2 Think Хакатон, победитель (1/900)     & KAIST E5 Global Конкурс Стартапов (2/40)
+  \end{tabular}}
+\resumeSubHeadingListEnd
+
+%-----------ОПЫТ РАБОТЫ-----------
+\section{Опыт работы}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Desargues AI}{Астана, Казахстан}
+    {Сооснователь}{фев 2026 -- сейчас}
+    \resumeItemListStart
+      \resumeItem{Разрабатываю Верифицируемый Математический Интеллект / Математический Суперинтеллект.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Higgsfield AI}{Алматы, Казахстан}
+    {ML-инженер}{сен 2025 -- фев 2026}
+    \resumeItemListStart
+      \resumeItem{Собирал датасеты и делал высокочувствительные классификаторы для сгенерированных и реальных изображений в проде.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Mercor AI Lab}{Удалённо}
+    {Эксперт по олимпиадной и научной математике / инженер данных}{2025}
+    \resumeItemListStart
+      \resumeItem{Собирал и оценивал данные для создания лучшей модел  в рейтинге FrontierMath.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Математические олимпиады}{Казахстан}
+    {Тренер по математике, организатор сборов, жюри, автор задач}{2021 -- сейчас}
+    \resumeItemListStart
+      \resumeItem{Проводил учебно-тренировочные сборы для участников национальной команды IMO.}
+      \resumeItem{Подготовил 4 учеников с базового уровня до уровня международных медалистов.}
+      \resumeItem{Жюри и организатор на 20+ региональных, республиканских и международных олимпиадах.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------АКАДЕМИЧЕСКИЙ ОПЫТ-----------
+\section{Академический опыт}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Назарбаев Университет}{Астана, Казахстан}
+    {Ассистент преподавателя по микроэкономике}{осень 2024}
+    \resumeItemListStart
+      \resumeItem{Вёл семинары и помогал студентам готовиться к экзаменам.}
+    \resumeItemListEnd
+
+  \vspace{-18pt}
+
+  \resumeSubheading
+    {}{}
+    {Научный ассистент по математике}{осень 2025}
+    \resumeItemListStart
+      \resumeItem{Работал с профессорами Рустемом Тахановым и Женисбеком Асылбековым над критериями соответствия распределений. Создавал тестовые распределения для оценки критериев.}
+    \resumeItemListEnd
+
+  \vspace{-18pt}
+
+  \resumeSubheading
+    {}{}
+    {Исследователь}{весна 2026}
+    \resumeItemListStart
+      \resumeItem{Работал под руководством профессора Адильбека Каиржана над дипломной работой по дисперсионным уравнениям в частных производных.}
+    \resumeItemListEnd
+
+  \vspace{-18pt}
+
+  \resumeSubheading
+    {}{}
+    {Волонтёр 15-го конгресса ISAAC}{август 2025}
+    \resumeItemListStart
+      \resumeItem{Сопровождал иностранных гостей, вёл интервью, организовывал и посещал семинары.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Imperial College London}{Лондон, Великобритания}
+    {Эксперт по формализации математики (LEAN)}{июль 2026}
+    \resumeItemListStart
+      \resumeItem{Участвовал в практикуме по формализации великой теоремы Ферма под руководством Кевина Баззарда. Формализовал теорию представлений.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% %-----------ВОЛОНТЁРСКИЙ ОПЫТ-----------
+% \section{Волонтёрский опыт}
+% \resumeSubHeadingListStart
+%
+%   \resumeSubheading
+%     {NU SIAM Student Chapter}{Астана, Казахстан}
+%     {Участник и представитель математиков}{2022 -- 2026}
+%     \resumeItemListStart
+%       \resumeItem{Организовывал математические доклады, соревнования (например, Integration Bee) и представлял студентов-математиков на факультетских обсуждениях.}
+%       \resumeItem{Создал и вёл академический Telegram-канал с 1000+ подписчиков.}
+%     \resumeItemListEnd
+%
+% \resumeSubHeadingListEnd
+
+%-----------КУРСЫ-----------
+% \section{Профильные курсы}
+% \resumeSubHeadingListStart
+%   \item{\begin{tabular}{@{}p{0.48\textwidth} p{0.48\textwidth}@{}}
+%     MATH 465: дифференциальная геометрия & MATH 481: уравнения в частных производных \\
+%     MATH 510: теория меры                & MATH 602: аналитическая теория чисел      \\
+%     MATH 682: функциональный анализ      & CSCI 371: алгоритмы II                    \\
+%     CSCI 694: глубокое обучение          & ECON 498: общее равновесие                \\
+%     CHEM 211: органическая химия         & MINE 402: добыча угля
+%   \end{tabular}}
+% \resumeSubHeadingListEnd
+
+\begin{comment}
+%-----------ПРОЕКТЫ-----------
+\section{Проекты}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Детекция рака кожи}}{\textit{осень 2025}}
+    \resumeItemListStart
+      \resumeItem{Разработал модель на основе CNN для выявления рака кожи по медицинским изображениям.}
+      \resumeItem{Исследовал применение глубокого обучения в медицинской диагностике.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\end{comment}
+
+%-----------НАВЫКИ И УВЛЕЧЕНИЯ-----------
+\section{Прочее}
+\resumeSubHeadingListStart
+  \resumeItem{\textbf{Навыки:} ML, DS, GitHub, C++, Python, AWS, Docker, SQL, BigQuery, Grafana, LaTeX, Excel, Apify.}
+  % \resumeItem{\textbf{Увлечения:} спортивное программирование (Codeforces 1600), шахматы (1700 блиц/рапид), фортепиано, настольный теннис.}
+\resumeSubHeadingListEnd
+
+\end{document}

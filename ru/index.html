@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Рахим Баймурзин</title>
+<meta name="description" content="Рахим Баймурзин — математик и программист. Резюме, награды, исследования и контакты.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101211" media="(prefers-color-scheme: dark)">
+<link rel="alternate" hreflang="en" href="../">
+<link rel="alternate" hreflang="ru" href="../ru/">
+<link rel="alternate" hreflang="kk" href="../kk/">
+<link rel="alternate" hreflang="x-default" href="../">
+<link rel="stylesheet" href="../fonts/press-start-2p.css">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13' font-family='monospace'>R</text></svg>">
+<!-- generated from content.toml by build.py — do not edit by hand -->
+<script>
+// Applied before first paint so a chosen theme never flashes the other one.
+try {
+  var th = localStorage.getItem('theme');
+  if (th === 'light' || th === 'dark') document.documentElement.setAttribute('data-theme', th);
+} catch (e) {}
+</script>
+</head>
+<body>
+
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<header class="bar">
+  <div class="bar-inner">
+    <nav class="langs" aria-label="language">
+      <ul>
+        <li><a href="../" hreflang="en" lang="en" title="English">EN</a></li>
+        <li><span aria-current="page">RU</span></li>
+        <li><a href="../kk/" hreflang="kk" lang="kk" title="Қазақша">KK</a></li>
+      </ul>
+    </nav>
+    <div class="controls">
+      <button type="button" id="font-btn" class="ctl ctl-btn"
+              aria-label="шрифт">
+        <svg class="icon icon-a-round" viewBox="0 0 7 7" aria-hidden="true">
+          <!-- smooth 'A' — shown while the pixel face is on -->
+          <path d="M3.5 1c-.52 0-.94.32-1.11.82L1 6h1.06l.46-1.4h1.96L4.94 6H6L4.61 1.82C4.44 1.32 4.02 1 3.5 1zm0 1.15.63 1.62H2.87z"/>
+        </svg>
+        <svg class="icon icon-a-pixel" viewBox="0 0 7 7" aria-hidden="true">
+          <!-- pixel 'A' — shown while the smooth face is on -->
+          <path d="M2 1h3v1H2zM1 2h1v5H1zM5 2h1v5H5zM2 4h3v1H2z"/>
+        </svg>
+      </button>
+      <button type="button" id="bg-btn" class="ctl ctl-btn"
+              aria-label="фон" aria-pressed="true">
+        <canvas id="bg-icon" width="13" height="13" aria-hidden="true"></canvas>
+      </button>
+      <button type="button" id="theme-btn" class="ctl ctl-btn"
+              aria-label="тема">
+        <svg class="icon icon-sun" viewBox="0 0 9 9" aria-hidden="true">
+          <!-- pixel sun -->
+          <path d="M3 3h3v3H3zM4 0h1v2H4zM4 7h1v2H4zM0 4h2v1H0zM7 4h2v1H7zM1 1h1v1H1zM7 1h1v1H7zM1 7h1v1H1zM7 7h1v1H7z"/>
+        </svg>
+        <svg class="icon icon-moon" viewBox="0 0 9 9" aria-hidden="true">
+          <!-- pixel crescent -->
+          <path d="M3 1h3v1H3zM2 2h1v1H2zM1 3h1v3H1zM2 6h1v1H2zM3 7h3v1H3zM6 6h1v1H6zM4 2h3v1H4zM3 3h2v3H3zM4 6h3v1H4z" fill-opacity="0"/>
+          <path d="M5 0a4.5 4.5 0 1 0 3 8 5 5 0 0 1-3-8z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+<nav class="toc" id="toc" aria-label="Содержание">
+  <details id="toc-details">
+    <summary>Содержание</summary>
+    <ul>
+      <li class="d1"><a href="#profile"><span class="n">1</span> <span class="l">Рахим Баймурзин</span></a></li>
+      <li class="d2"><a href="#about"><span class="n">1.1</span> <span class="l">о себе</span></a></li>
+      <li class="d2"><a href="#links"><span class="n">1.2</span> <span class="l">ссылки</span></a></li>
+      <li class="d1"><a href="#honors"><span class="n">2</span> <span class="l">Награды</span></a></li>
+      <li class="d2"><a href="#honors-math"><span class="n">2.1</span> <span class="l">математика и программирование</span></a></li>
+      <li class="d2"><a href="#honors-other"><span class="n">2.2</span> <span class="l">прочее</span></a></li>
+      <li class="d1"><a href="#education"><span class="n">3</span> <span class="l">Образование</span></a></li>
+      <li class="d2"><a href="#masters"><span class="n">3.1</span> <span class="l">магистратура</span></a></li>
+      <li class="d2"><a href="#bachelors"><span class="n">3.2</span> <span class="l">бакалавриат</span></a></li>
+      <li class="d2"><a href="#highschool"><span class="n">3.3</span> <span class="l">школа</span></a></li>
+      <li class="d1"><a href="#experience"><span class="n">4</span> <span class="l">Опыт</span></a></li>
+      <li class="d2"><a href="#work"><span class="n">4.1</span> <span class="l">опыт работы</span></a></li>
+      <li class="d3"><a href="#desargues"><span class="n">4.1a</span> <span class="l">desargues ai</span></a></li>
+      <li class="d3"><a href="#higgsfield"><span class="n">4.1b</span> <span class="l">higgsfield ai</span></a></li>
+      <li class="d3"><a href="#mercor"><span class="n">4.1c</span> <span class="l">mercor</span></a></li>
+      <li class="d3"><a href="#olympiads"><span class="n">4.1d</span> <span class="l">олимпиады</span></a></li>
+      <li class="d2"><a href="#academic"><span class="n">4.2</span> <span class="l">академический опыт</span></a></li>
+      <li class="d3"><a href="#nu-academic"><span class="n">4.2a</span> <span class="l">TA / RA</span></a></li>
+      <li class="d3"><a href="#flt"><span class="n">4.2b</span> <span class="l">практикум FLT</span></a></li>
+      <li class="d2"><a href="#other"><span class="n">4.3</span> <span class="l">прочий опыт</span></a></li>
+      <li class="d2"><a href="#coursework"><span class="n">4.4</span> <span class="l">избранные курсы</span></a></li>
+    </ul>
+  </details>
+</nav>
+
+<main>
+
+<section class="chapter" id="profile">
+  <div class="head">
+    <h1><span class="n">1</span> Рахим Баймурзин</h1>
+    <p class="subtitle">[Математик / Программист]</p>
+  </div>
+  <section class="sub" id="about">
+    <h3><span class="n">1.1</span> о себе</h3>
+    <p>привет! меня зовут Рахим, я из промышленной <strong><span class="ac ac-past">Караганды</span></strong>. сейчас живу в <strong><span class="ac ac-here">Астане, Казахстан</span></strong>. говорю на английском, русском и казахском. я медалист IMO, немного занимаюсь AI/ML, чуть-чуть программированием и совсем чуть-чуть исследовательской математикой.</p>
+  </section>
+  <section class="sub" id="links">
+    <h3><span class="n">1.2</span> ссылки</h3>
+    <ul class="links">
+      <li><a href="../cv/cv-ru.pdf">cv.pdf</a></li>
+      <li><a href="https://t.me/baimurzzin" class="lk lk-telegram">telegram</a></li>
+      <li><a href="https://www.linkedin.com/in/baimurzzin" class="lk lk-linkedin">linkedin</a></li>
+      <li><a href="https://github.com/baimurzzin">github</a></li>
+    </ul>
+  </section>
+</section>
+
+<section class="chapter" id="honors">
+  <h2><span class="n">2</span> Награды</h2>
+  <section class="sub" id="honors-math">
+    <h3><span class="n">2.1</span> математика и программирование</h3>
+    <ul class="plain">
+      <li class="has-sub">
+        <span class="lead" tabindex="0" role="button" aria-expanded="false"><span class="label">IMO 2021 — <span class="medal m-bronze">бронза</span></span><span class="cue" aria-hidden="true"></span></span>
+        <div class="sub-wrap"><ul>
+          <li>Республиканская олимпиада по математике 2021 — <span class="medal m-silver">серебро</span></li>
+          <li>Республиканская олимпиада по математике 2022 — <span class="medal m-silver">серебро</span></li>
+        </ul></div>
+      </li>
+      <li>Балканская МО 2021 — <span class="medal m-bronze">бронза</span></li>
+      <li>Жаутыковская олимпиада 2021 — <span class="medal m-silver">серебро</span></li>
+      <li>APMO 2022 — <span class="medal m-bronze">бронза</span></li>
+      <li class="has-sub">
+        <span class="lead" tabindex="0" role="button" aria-expanded="false"><span class="label">ICPC NEF (полуфинал) 2025 — <span class="medal m-hm">похвальная грамота</span></span><span class="cue" aria-hidden="true"></span></span>
+        <div class="sub-wrap"><ul>
+          <li>ICPC Kazakhstan Regional Contest (четвертьфинал) 2025 — <span class="medal m-gold">диплом I степени</span></li>
+          <li>ICPC Kazakhstan Regional Contest (четвертьфинал) 2024 — <span class="medal m-silver">диплом II степени</span></li>
+        </ul></div>
+      </li>
+      <li class="has-sub">
+        <span class="lead" tabindex="0" role="button" aria-expanded="false"><span class="label">IMC 2026 — <span class="medal m-silver">серебро</span></span><span class="cue" aria-hidden="true"></span></span>
+        <div class="sub-wrap"><ul>
+          <li>Республиканская студенческая олимпиада по математике 2026 — <span class="medal m-gold">гран-при, абсолютный победитель (1/44)</span></li>
+          <li>Республиканская студенческая олимпиада по математике 2025 — <span class="medal m-silver">серебро</span></li>
+        </ul></div>
+      </li>
+    </ul>
+  </section>
+  <section class="sub" id="honors-other">
+    <h3><span class="n">2.2</span> прочее</h3>
+    <ul class="plain">
+      <li>Республиканский конкурс научных проектов 2022 — <span class="medal m-bronze">бронза</span></li>
+      <li class="has-sub">
+        <span class="lead" tabindex="0" role="button" aria-expanded="false"><span class="label">MBZUAI K2 Think International Hackathon 2025 — <span class="medal m-gold">абсолютный победитель (1/900)</span></span><span class="cue" aria-hidden="true"></span></span>
+        <div class="sub-wrap"><ul>
+          <li>среди 16 команд очного финала были команды из Ivy League, MIT и DeepMind</li>
+        </ul></div>
+      </li>
+      <li>KAIST E5 Global Start-up Fair 2026 — <span class="medal m-silver">второе место (2/40)</span></li>
+    </ul>
+  </section>
+</section>
+
+<section class="chapter" id="education">
+  <h2><span class="n">3</span> Образование</h2>
+  <section class="sub" id="masters">
+    <h3><span class="n">3.1</span> магистратура</h3>
+    <div class="entry" id="masters-1">
+      <h4>Назарбаев Университет</h4>
+      <p class="meta"><span class="role">магистр прикладной математики</span><span>2026 – 2028</span></p>
+    </div>
+  </section>
+  <section class="sub" id="bachelors">
+    <h3><span class="n">3.2</span> бакалавриат</h3>
+    <div class="entry" id="bachelors-1">
+      <h4><span class="ac ac-org">Nazarbayev University</span></h4>
+      <p class="meta"><span class="role">бакалавр математики — GPA = π + ε (ε ≈ 0.07)</span><span>2022 – 2026</span></p>
+    </div>
+  </section>
+  <section class="sub" id="highschool">
+    <h3><span class="n">3.3</span> школа</h3>
+    <div class="entry" id="highschool-1">
+      <h4><span class="ac ac-nis">Назарбаев Интеллектуальная школа</span>, Караганда</h4>
+      <p class="meta"><span class="role">аттестат — GPA 3.75, ЕНТ 138/140</span><span>2016 – 2022</span></p>
+      <ul>
+        <li>Первый в истории школы медалист ISO.</li>
+      </ul>
+    </div>
+  </section>
+</section>
+
+<section class="chapter" id="experience">
+  <h2><span class="n">4</span> Опыт</h2>
+  <section class="sub" id="work">
+    <h3><span class="n">4.1</span> опыт работы</h3>
+    <div class="entry" id="desargues">
+      <h4><span class="ac ac-past">Desargues AI</span> — сооснователь</h4>
+      <p class="meta"><span class="role">Астана, Казахстан</span><span>фев 2026 – сейчас</span></p>
+      <ul>
+        <li>Разрабатываю Верифицируемый Математический Интеллект / Математический Суперинтеллект.</li>
+      </ul>
+    </div>
+    <div class="entry" id="higgsfield">
+      <h4><span class="ac ac-hf">Higgsfield AI</span> — ML-инженер</h4>
+      <p class="meta"><span class="role">Алматы, Казахстан</span><span>сен 2025 – фев 2026</span></p>
+      <ul>
+        <li>Собирал датасеты и делал классификаторы для сгенерированных и реальных изображений в проде.</li>
+      </ul>
+    </div>
+    <div class="entry" id="mercor">
+      <h4><span class="ac ac-mercor">Mercor AI Lab</span> — эксперт по олимпиадной и научной математике / инженер данных</h4>
+      <p class="meta"><span class="role">удалённо</span><span>2025</span></p>
+      <ul>
+        <li>Собирал и оценивал данные для создания лучшей модели в рейтинге FrontierMath.</li>
+      </ul>
+    </div>
+    <div class="entry" id="olympiads">
+      <h4>Математические олимпиады — тренер по математике, организатор сборов, жюри, автор задач</h4>
+      <p class="meta"><span class="role">Казахстан</span><span>2021 – сейчас</span></p>
+      <ul>
+        <li>Проводил учебно-тренировочные сборы для участников национальной команды IMO.</li>
+        <li>Подготовил 4 учеников с базового уровня до уровня международных медалистов.</li>
+        <li>Жюри и организатор на 20+ региональных, республиканских и международных олимпиадах.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="sub" id="academic">
+    <h3><span class="n">4.2</span> академический опыт</h3>
+    <div class="entry" id="nu-academic">
+      <h4><span class="ac ac-org">Nazarbayev University</span></h4>
+      <p class="meta"><span class="role">Астана, Казахстан</span><span>2024 – 2026</span></p>
+      <div class="role-block" id="ta-micro">
+        <p class="role-line"><span class="name">ассистент преподавателя по микроэкономике</span><span>осень 2024</span></p>
+        <ul>
+          <li>Вёл семинары и помогал студентам готовиться к экзаменам.</li>
+        </ul>
+      </div>
+      <div class="role-block" id="ra">
+        <p class="role-line"><span class="name">научный ассистент по математике</span><span>осень 2025</span></p>
+        <ul>
+          <li>Работал с профессорами Рустемом Тахановым и Женисбеком Асылбековым над критериями соответствия распределений. Создавал тестовые распределения для оценки критериев.</li>
+        </ul>
+      </div>
+      <div class="role-block" id="thesis">
+        <p class="role-line"><span class="name">исследователь</span><span>весна 2026</span></p>
+        <ul>
+          <li>Работал под руководством профессора Адильбека Каиржана над дипломной работой по дисперсионным уравнениям в частных производных.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="entry" id="flt">
+      <h4><span class="ac ac-icl">Imperial College London</span> — эксперт по формализации математики (LEAN)</h4>
+      <p class="meta"><span class="role">Лондон, Великобритания</span><span>июль 2026</span></p>
+      <ul>
+        <li>Участвовал в практикуме по формализации великой теоремы Ферма под руководством Кевина Баззарда. Формализовал теорию представлений.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="sub" id="other">
+    <h3><span class="n">4.3</span> прочий опыт</h3>
+    <div class="entry" id="siam">
+      <h4><span class="ac ac-siam">NU SIAM</span> — участник и представитель матфака</h4>
+      <p class="meta"><span class="role">Астана, Казахстан</span><span>2022 – 2026</span></p>
+      <ul>
+        <li>Организовывал математические доклады и соревнования, в том числе Integration Bee, представлял студентов-математиков на факультетских обсуждениях.</li>
+        <li>Создал и веду академический Telegram-канал с 1000+ подписчиков.</li>
+      </ul>
+    </div>
+    <div class="entry" id="isaac">
+      <h4>15-й конгресс ISAAC — волонтёр</h4>
+      <p class="meta"><span class="role">Астана, Казахстан</span><span>август 2025</span></p>
+      <ul>
+        <li>Сопровождал иностранных гостей, вёл интервью, организовывал и посещал семинары.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="sub" id="coursework">
+    <h3><span class="n">4.4</span> избранные курсы</h3>
+    <div class="cols">
+    <ul class="plain">
+      <li>MATH 417 — криптография</li>
+      <li>MATH 456 — группы Ли и представления</li>
+      <li>MATH 462 — продвинутая линейная алгебра</li>
+      <li>MATH 465 — дифференциальная геометрия</li>
+      <li>MATH 480 — комплексный анализ</li>
+      <li>MATH 481 — PDE</li>
+      <li>MATH 499 — дипломная работа</li>
+      <li>MATH 510 — теория меры</li>
+      <li>MATH 602 — аналитическая теория чисел</li>
+      <li>MATH 682 — функциональный анализ</li>
+    </ul>
+    <ul class="plain">
+      <li>CSCI 371 — продвинутые алгоритмы</li>
+      <li>CSCI 390 — ИИ</li>
+      <li>CSCI 594 — глубокое обучение</li>
+      <li class="gap">ECON 498 — общее равновесие</li>
+      <li class="gap">CHEM 211 — органическая химия I</li>
+      <li>CHEM 250 — описательная неорганическая химия</li>
+      <li class="gap">MINE 402 — добыча угля</li>
+    </ul>
+    </div>
+  </section>
+</section>
+
+</main>
+</div>
+
+<script src="../site.js"></script>
+<script data-goatcounter="https://baimurzzin.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

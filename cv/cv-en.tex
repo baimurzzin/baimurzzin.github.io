@@ -1,0 +1,247 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Adapted for Rakhim Baimurzin
+% Build  : tectonic cv-en.tex   (or)  pdflatex cv-en.tex
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{comment}
+\usepackage{iftex}
+
+% Tagged-PDF glyph map: pdfTeX only, skipped under XeTeX/LuaTeX.
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Resume macros
+%-------------------------
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Rakhim Baimurzin} \\
+    Kazakhstan $|$
+    \href{mailto:baimurzzin@gmail.com}{\underline{baimurzzin@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/baimurzzin/}{\underline{linkedin}} $|$
+    tg: @baimurzzin
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  % \resumeSubheading
+  %   {Nazarbayev Intellectual School (NIS)}{Karaganda, Kazakhstan}
+  %   {High School Diploma, GPA 3.75, UNT 138/140, first ISO medalist from the school}{2016 -- 2022}
+  \resumeSubheading
+    {Nazarbayev University}{Astana, Kazakhstan}
+    {MSc in Applied Mathematics}{2026 -- 2028}
+  \resumeSubheading
+    {Nazarbayev University}{Astana, Kazakhstan}
+    {BSc in Mathematics, GPA 3.21}{2022 -- 2026}
+\resumeSubHeadingListEnd
+
+%-----------HONORS & AWARDS-----------
+\section{Honors \& Awards}
+\resumeSubHeadingListStart
+  \item{\begin{tabular}{@{}p{0.45\textwidth} p{0.45\textwidth}@{}}
+    \textbf{IMO 2021 Bronze}                  & \textbf{ICPC Northern Eurasia Finalist}       \\
+    IMC 2026 Silver                           & Kazakhstan Student MO 2026 Grand Prix (1/50)  \\
+    MBZUAI K2 Think Hackathon Winner (1/900)  & KAIST E5 Global Start-up Competition (2/40)
+  \end{tabular}}
+\resumeSubHeadingListEnd
+
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Desargues AI}{Astana, Kazakhstan}
+    {Co-Founder}{Feb 2026 -- Now}
+    \resumeItemListStart
+      \resumeItem{Building VMI/MSI (Verifiable Math Intelligence/Math Super Intelligence).}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Higgsfield AI}{Almaty, Kazakhstan}
+    {ML Engineer}{Sep 2025 -- Feb 2026}
+    \resumeItemListStart
+      \resumeItem{Collected datasets and built production image classifiers for AI and real imagery optimized for high recall.}
+      \resumeItem{Built strong practical and theoretical understanding of modern ML and GenAI (diffusion models, transformers, embedding models), informed by recent research and engineering discussions.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Mercor AI Lab}{Remote}
+    {IMO and Math Research Expert / Dataset Contributor}{2025}
+    \resumeItemListStart
+      \resumeItem{Collected and evaluated the data to build SOTA LLM in FrontierMath benchmark.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Math Olympiads}{Kazakhstan}
+    {Math Coach, Camp Organizer, Jury, Problem Setter}{2021 -- Now}
+    \resumeItemListStart
+      \resumeItem{Conducted multiple training camps for national IMO team.}
+      \resumeItem{Trained 4 students from basic to international medalist level.}
+      \resumeItem{Jury and Organizer at 20+ Regional, National and International Olympiads.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------ACADEMIC EXPERIENCE-----------
+\section{Academic Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Nazarbayev University}{Astana, Kazakhstan}
+    {Microeconomics TA (Teaching Assistant)}{Fall 2024}
+    \resumeItemListStart
+      \resumeItem{Led tutorials and helped students prepare for the exams.}
+    \resumeItemListEnd
+
+  \vspace{-18pt}
+
+  \resumeSubheading
+    {}{}
+    {Math RA (Research Assistant)}{Fall 2025}
+    \resumeItemListStart
+      \resumeItem{Worked with professors Rustem Takhanov and Zhenisbek Assylbekov on distributions fit tests. Generated sample distributions for measuring performance of the tests.}
+    \resumeItemListEnd
+
+  \vspace{-18pt}
+
+  \resumeSubheading
+    {}{}
+    {Undergraduate Researcher}{Spring 2026}
+    \resumeItemListStart
+      \resumeItem{Worked under supervision of professor Adilbek Kairzhan on undergraduate thesis on dispersive PDEs.}
+    \resumeItemListEnd
+
+  \vspace{-18pt}
+
+  \resumeSubheading
+    {}{}
+    {15th ISAAC Congress Volunteer}{August 2025}
+    \resumeItemListStart
+      \resumeItem{Guided international guests, hosted interviews, organized and attended seminars.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Imperial College London}{London, UK}
+    {Math (LEAN) Formalization Expert}{July 2026}
+    \resumeItemListStart
+      \resumeItem{Attended formalize FLT workshop hosted by Kevin Buzzard. Formalized representation theory.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% %-----------VOLUNTEERING EXPERIENCE-----------
+% \section{Volunteering Experience}
+% \resumeSubHeadingListStart
+%
+%   \resumeSubheading
+%     {NU SIAM Student Chapter}{Astana, Kazakhstan}
+%     {Member \& Math Representative}{2022 -- 2026}
+%     \resumeItemListStart
+%       \resumeItem{Organized math talks, competitions (e.g., Integration Bee), and represented math students in faculty discussions.}
+%       \resumeItem{Created and managed a Telegram academic channel with 1000+ subscribers.}
+%     \resumeItemListEnd
+%
+% \resumeSubHeadingListEnd
+
+%-----------COURSES-----------
+% \section{Relevant Courses}
+% \resumeSubHeadingListStart
+%   \item{\begin{tabular}{@{}p{0.48\textwidth} p{0.48\textwidth}@{}}
+%     MATH 465: Differential Geometry & MATH 481: Partial Differential Equations \\
+%     MATH 510: Measure Theory        & MATH 602: Analytical Number Theory       \\
+%     MATH 682: Functional Analysis   & CSCI 371: Algorithms II                  \\
+%     CSCI 694: Deep Learning         & ECON 498: General Equilibrium            \\
+%     CHEM 211: Organic Chemistry     & MINE 402: Coal Mining
+%   \end{tabular}}
+% \resumeSubHeadingListEnd
+
+\begin{comment}
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Skin Cancer Detection}}{\textit{Fall 2025}}
+    \resumeItemListStart
+      \resumeItem{Developed a CNN-based model for detecting skin cancer from medical imaging datasets.}
+      \resumeItem{Explored deep learning applications in medical diagnostics.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\end{comment}
+
+%-----------SKILLS & HOBBIES-----------
+\section{Other}
+\resumeSubHeadingListStart
+  \resumeItem{\textbf{Skills:} ML, Data Engineering, GitHub, C++, Python, AWS, Docker, SQL, BigQuery, Grafana, LaTeX, Excel, Apify.}
+  % \resumeItem{\textbf{Hobbies:} Competitive programming (Codeforces 1600), Chess (1700 blitz/rapid), Piano, Table Tennis.}
+\resumeSubHeadingListEnd
+
+\end{document}

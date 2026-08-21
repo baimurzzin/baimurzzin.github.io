@@ -1,0 +1,532 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  Единственный источник контента сайта. Правишь здесь → `make site`.
+#  Языки: en (в корне), ru (/ru/), kk (/kk/). Пустой ru/kk → подставится en.
+#
+#  СТРУКТУРА = ОГЛАВЛЕНИЕ.
+#    [[chapters]]                  → 1, 2, 3, 4
+#    [[chapters.sections]]         → 1.1, 4.2 …
+#    [[chapters.sections.items]]   → 4.1a, 4.1b …  (буквы в оглавлении
+#                                     появляются, только если items > 1)
+#
+#  type секции: "kv" | "links" | "entries" | "list"
+#  draft = true  → блок целиком выпадает из HTML (слот под будущий текст);
+#                  сборка напоминает о нём в логе.
+# ─────────────────────────────────────────────────────────────────────────────
+
+[site]
+repo = "https://github.com/baimurzzin/baimurzzin.github.io"
+# Счётчик GoatCounter. Пусто → тега аналитики в сборке нет вообще.
+goatcounter = "https://baimurzzin.goatcounter.com/count"
+toc_title = { en = "Contents", ru = "Содержание", kk = "Мазмұны" }
+
+[site.ui]
+font = { en = "font", ru = "шрифт", kk = "қаріп" }
+background = { en = "background", ru = "фон", kk = "фон" }
+theme = { en = "theme", ru = "тема", kk = "тақырып" }
+
+[site.title]
+en = "Rakhim Baimurzin"
+ru = "Рахим Баймурзин"
+kk = "Рахим Баймурзин"
+
+[site.description]
+en = "Rakhim Baimurzin — mathematician and programmer. CV, honors, research and contacts."
+ru = "Рахим Баймурзин — математик и программист. Резюме, награды, исследования и контакты."
+kk = "Рахим Баймурзин — математик және бағдарламашы. Түйіндеме, марапаттар, зерттеу және байланыс."
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+#  Цвета для имён собственных. Ключ — точное написание (у каждого языка своё),
+#  значение — имя цвета; сами цвета живут в style.css как --ac-<имя>.
+#  Подсветка срабатывает и в тексте, и в заголовках записей.
+# ═════════════════════════════════════════════════════════════════════════════
+[accents]
+"Karaganda" = "past"
+"Караганды" = "past"
+"Қарағанды" = "past"
+"Desargues AI" = "past"
+
+"Mercor AI Lab" = "mercor"
+
+"NU SIAM" = "siam"
+
+"Imperial College London" = "icl"
+
+"Nazarbayev Intellectual School" = "nis"
+"Назарбаев Интеллектуальная школа" = "nis"
+"Назарбаев Зияткерлік мектебі" = "nis"
+
+"Astana, Kazakhstan" = "here"
+"Астане, Казахстан" = "here"
+"Астанада, Қазақстанда" = "here"
+
+"Higgsfield AI" = "hf"
+"Nazarbayev University" = "org"
+
+# ═════════════════════════════════════════════════════════════════════════════
+#  1. Rakhim Baimurzin
+# ═════════════════════════════════════════════════════════════════════════════
+[[chapters]]
+id = "profile"
+header = true                       # рендерится как шапка страницы, а не как секция
+title = { en = "Rakhim Baimurzin", ru = "Рахим Баймурзин", kk = "Рахим Баймурзин" }
+subtitle = { en = "Mathematician / Programmer", ru = "Математик / Программист", kk = "Математик / Бағдарламашы" }
+
+# ── 1.1 about ────────────────────────────────────────────────────────────────
+[[chapters.sections]]
+id = "about"
+type = "text"
+title = { en = "about", ru = "о себе", kk = "өзім туралы" }
+
+[[chapters.sections.paragraphs]]
+en = """
+hey! my name is Rakhim and i'm from the industrial city of **Karaganda**. currently i am located in **Astana, Kazakhstan**. i speak english, russian and kazakh. i am an IMO medalist, and i do a bit of AI/ML, a little bit of programming, and a tiny bit of research math.
+"""
+ru = """
+привет! меня зовут Рахим, я из промышленной **Караганды**. сейчас живу в **Астане, Казахстан**. говорю на английском, русском и казахском. я медалист IMO, немного занимаюсь AI/ML, чуть-чуть программированием и совсем чуть-чуть исследовательской математикой.
+"""
+kk = """
+сәлем! менің атым Рахим, өнеркәсіптік **Қарағанды** қаласынанмын. қазір **Астанада, Қазақстанда** тұрамын. ағылшынша, орысша және қазақша сөйлеймін. мен IMO медалистімін, аздап AI/ML-мен, сәл бағдарламалаумен және мүлдем аздап зерттеу математикасымен айналысамын.
+"""
+
+# ── 1.2 links ────────────────────────────────────────────────────────────────
+[[chapters.sections]]
+id = "links"
+type = "links"
+title = { en = "links", ru = "ссылки", kk = "сілтемелер" }
+
+[[chapters.sections.items]]
+href = "cv/cv-{lang}.pdf"
+pdf = true
+label = { en = "cv.pdf", ru = "cv.pdf", kk = "cv.pdf" }
+
+[[chapters.sections.items]]
+href = "https://t.me/baimurzzin"
+tint = "telegram"
+label = { en = "telegram", ru = "telegram", kk = "telegram" }
+
+[[chapters.sections.items]]
+href = "https://www.linkedin.com/in/baimurzzin"
+tint = "linkedin"
+label = { en = "linkedin", ru = "linkedin", kk = "linkedin" }
+
+[[chapters.sections.items]]
+href = "https://github.com/baimurzzin"
+label = { en = "github", ru = "github", kk = "github" }
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+#  2. Honors and awards
+# ═════════════════════════════════════════════════════════════════════════════
+[[chapters]]
+id = "honors"
+title = { en = "Honors and awards", ru = "Награды", kk = "Марапаттар" }
+
+# ── 2.1 math and programming ─────────────────────────────────────────────────
+#  `award` — результат отдельным полем: `medal` (gold / silver / bronze / hm) красит
+#  его, и ни одному языку не нужно называть цвет словами.
+#  Строки с `sub` рисуются свёрнутыми: младшие ступени того же пути
+#  раскрываются по наведению и фиксируются кликом.
+[[chapters.sections]]
+id = "honors-math"
+type = "list"
+title = { en = "math and programming", ru = "математика и программирование", kk = "математика және бағдарламалау" }
+
+# ── IMO ──
+[[chapters.sections.items]]
+medal = "bronze"
+en = "IMO 2021"
+ru = "IMO 2021"
+kk = "IMO 2021"
+award = { en = "bronze", ru = "бронза", kk = "қола" }
+
+[[chapters.sections.items.sub]]
+medal = "silver"
+en = "Kazakhstan National MO 2021"
+ru = "Республиканская олимпиада по математике 2021"
+kk = "Республикалық математика олимпиадасы 2021"
+award = { en = "silver", ru = "серебро", kk = "күміс" }
+
+[[chapters.sections.items.sub]]
+medal = "silver"
+en = "Kazakhstan National MO 2022"
+ru = "Республиканская олимпиада по математике 2022"
+kk = "Республикалық математика олимпиадасы 2022"
+award = { en = "silver", ru = "серебро", kk = "күміс" }
+
+# ── Balkan MO ──
+[[chapters.sections.items]]
+medal = "bronze"
+en = "Balkan MO 2021"
+ru = "Балканская МО 2021"
+kk = "Балқан МО 2021"
+award = { en = "bronze", ru = "бронза", kk = "қола" }
+
+# ── IZhO ──
+[[chapters.sections.items]]
+medal = "silver"
+en = "IZhO 2021"
+ru = "Жаутыковская олимпиада 2021"
+kk = "Жәутіков олимпиадасы 2021"
+award = { en = "silver", ru = "серебро", kk = "күміс" }
+
+# ── APMO ──
+[[chapters.sections.items]]
+medal = "bronze"
+en = "APMO 2022"
+ru = "APMO 2022"
+kk = "APMO 2022"
+award = { en = "bronze", ru = "бронза", kk = "қола" }
+
+# ── ICPC ──
+[[chapters.sections.items]]
+medal = "hm"
+en = "ICPC NEF (semifinals) 2025"
+ru = "ICPC NEF (полуфинал) 2025"
+kk = "ICPC NEF (жартылай финал) 2025"
+award = { en = "honorable mention", ru = "похвальная грамота", kk = "мадақтама" }
+
+[[chapters.sections.items.sub]]
+medal = "gold"
+en = "ICPC Kazakhstan Regional Contest (quarterfinals) 2025"
+ru = "ICPC Kazakhstan Regional Contest (четвертьфинал) 2025"
+kk = "ICPC Kazakhstan Regional Contest (ширек финал) 2025"
+award = { en = "diploma of the I degree", ru = "диплом I степени", kk = "I дәрежелі диплом" }
+
+[[chapters.sections.items.sub]]
+medal = "silver"
+en = "ICPC Kazakhstan Regional Contest (quarterfinals) 2024"
+ru = "ICPC Kazakhstan Regional Contest (четвертьфинал) 2024"
+kk = "ICPC Kazakhstan Regional Contest (ширек финал) 2024"
+award = { en = "diploma of the II degree", ru = "диплом II степени", kk = "II дәрежелі диплом" }
+
+# ── IMC ──
+[[chapters.sections.items]]
+medal = "silver"
+en = "IMC 2026"
+ru = "IMC 2026"
+kk = "IMC 2026"
+award = { en = "silver", ru = "серебро", kk = "күміс" }
+
+[[chapters.sections.items.sub]]
+medal = "gold"
+en = "National Student MO 2026"
+ru = "Республиканская студенческая олимпиада по математике 2026"
+kk = "Республикалық студенттік математика олимпиадасы 2026"
+award = { en = "grand prize, absolute winner (1/44)", ru = "гран-при, абсолютный победитель (1/44)", kk = "гран-при, абсолютті жеңімпаз (1/44)" }
+
+[[chapters.sections.items.sub]]
+medal = "silver"
+en = "National Student MO 2025"
+ru = "Республиканская студенческая олимпиада по математике 2025"
+kk = "Республикалық студенттік математика олимпиадасы 2025"
+award = { en = "silver", ru = "серебро", kk = "күміс" }
+
+# ── 2.2 others ───────────────────────────────────────────────────────────────
+[[chapters.sections]]
+id = "honors-other"
+type = "list"
+title = { en = "others", ru = "прочее", kk = "басқасы" }
+
+[[chapters.sections.items]]
+medal = "bronze"
+en = "Kazakhstan National Scientific Fair 2022"
+ru = "Республиканский конкурс научных проектов 2022"
+kk = "Республикалық ғылыми жобалар байқауы 2022"
+award = { en = "bronze", ru = "бронза", kk = "қола" }
+
+[[chapters.sections.items]]
+medal = "gold"
+en = "MBZUAI K2 Think International Hackathon 2025"
+ru = "MBZUAI K2 Think International Hackathon 2025"
+kk = "MBZUAI K2 Think International Hackathon 2025"
+award = { en = "absolute winner (1/900)", ru = "абсолютный победитель (1/900)", kk = "абсолютті жеңімпаз (1/900)" }
+
+[[chapters.sections.items.sub]]
+en = "among the 16 onsite finalists were teams from the Ivy League, MIT and DeepMind"
+ru = "среди 16 команд очного финала были команды из Ivy League, MIT и DeepMind"
+kk = "16 офлайн финалистің арасында Ivy League, MIT және DeepMind командалары болды"
+
+[[chapters.sections.items]]
+medal = "silver"
+en = "KAIST E5 Global Start-up Fair 2026"
+ru = "KAIST E5 Global Start-up Fair 2026"
+kk = "KAIST E5 Global Start-up Fair 2026"
+award = { en = "second place (2/40)", ru = "второе место (2/40)", kk = "екінші орын (2/40)" }
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+#  3. Education
+# ═════════════════════════════════════════════════════════════════════════════
+[[chapters]]
+id = "education"
+title = { en = "Education", ru = "Образование", kk = "Білім" }
+
+# ── 3.1 masters ──────────────────────────────────────────────────────────────
+[[chapters.sections]]
+id = "masters"
+type = "entries"
+title = { en = "masters", ru = "магистратура", kk = "магистратура" }
+
+[[chapters.sections.items]]
+heading = { en = "Nazarbayev University", ru = "Назарбаев Университет", kk = "Назарбаев Университеті" }
+place = { en = "MSc in Applied Mathematics", ru = "магистр прикладной математики", kk = "қолданбалы математика магистрі" }
+dates = { en = "2026 – 2028", ru = "2026 – 2028", kk = "2026 – 2028" }
+
+# ── 3.2 bachelors ────────────────────────────────────────────────────────────
+[[chapters.sections]]
+id = "bachelors"
+type = "entries"
+title = { en = "bachelors", ru = "бакалавриат", kk = "бакалавриат" }
+
+[[chapters.sections.items]]
+heading = { en = "Nazarbayev University", ru = "Nazarbayev University", kk = "Nazarbayev University" }
+place = { en = "BSc in Mathematics — GPA = π + ε (ε ≈ 0.07)", ru = "бакалавр математики — GPA = π + ε (ε ≈ 0.07)", kk = "математика бакалавры — GPA = π + ε (ε ≈ 0.07)" }
+dates = { en = "2022 – 2026", ru = "2022 – 2026", kk = "2022 – 2026" }
+
+# ── 3.3 highschool ───────────────────────────────────────────────────────────
+[[chapters.sections]]
+id = "highschool"
+type = "entries"
+title = { en = "highschool", ru = "школа", kk = "мектеп" }
+
+[[chapters.sections.items]]
+heading = { en = "Nazarbayev Intellectual School, Karaganda", ru = "Назарбаев Интеллектуальная школа, Караганда", kk = "Назарбаев Зияткерлік мектебі, Қарағанды" }
+place = { en = "High School Diploma — GPA 3.75, UNT 138/140", ru = "аттестат — GPA 3.75, ЕНТ 138/140", kk = "аттестат — GPA 3.75, ҰБТ 138/140" }
+dates = { en = "2016 – 2022", ru = "2016 – 2022", kk = "2016 – 2022" }
+
+[[chapters.sections.items.bullets]]
+en = "First ISO medalist in the school's history."
+ru = "Первый в истории школы медалист ISO."
+kk = "Мектеп тарихындағы алғашқы ISO медалисі."
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+#  4. Experience
+# ═════════════════════════════════════════════════════════════════════════════
+[[chapters]]
+id = "experience"
+title = { en = "Experience", ru = "Опыт", kk = "Тәжірибе" }
+
+# ── 4.1 work experience ──────────────────────────────────────────────────────
+[[chapters.sections]]
+id = "work"
+type = "entries"
+title = { en = "work experience", ru = "опыт работы", kk = "жұмыс тәжірибесі" }
+
+# 4.1a
+[[chapters.sections.items]]
+id = "desargues"
+toc = { en = "desargues ai", ru = "desargues ai", kk = "desargues ai" }
+heading = { en = "Desargues AI — Co-Founder", ru = "Desargues AI — сооснователь", kk = "Desargues AI — құрылтайшы" }
+place = { en = "Astana, Kazakhstan", ru = "Астана, Казахстан", kk = "Астана, Қазақстан" }
+dates = { en = "Feb 2026 – now", ru = "фев 2026 – сейчас", kk = "ақп 2026 – қазір" }
+
+[[chapters.sections.items.bullets]]
+en = "Building VMI/MSI (Verifiable Math Intelligence / Math Super Intelligence)."
+ru = "Разрабатываю Верифицируемый Математический Интеллект / Математический Суперинтеллект."
+kk = "Жасанды математикалық суперинтеллект жасап жатырмын."
+
+# 4.1b
+[[chapters.sections.items]]
+id = "higgsfield"
+toc = { en = "higgsfield ai", ru = "higgsfield ai", kk = "higgsfield ai" }
+heading = { en = "Higgsfield AI — ML Engineer", ru = "Higgsfield AI — ML-инженер", kk = "Higgsfield AI — ML инженері" }
+place = { en = "Almaty, Kazakhstan", ru = "Алматы, Казахстан", kk = "Алматы, Қазақстан" }
+dates = { en = "Sep 2025 – Feb 2026", ru = "сен 2025 – фев 2026", kk = "қыр 2025 – ақп 2026" }
+
+[[chapters.sections.items.bullets]]
+en = "Collected datasets and built production image classifiers for AI and real imagery."
+ru = "Собирал датасеты и делал классификаторы для сгенерированных и реальных изображений в проде."
+kk = "Датасеттер жинап, ЖИ жасаған және нақты кескіндерді ажырататын өнімдік классификаторлар жасадым."
+
+# 4.1c
+[[chapters.sections.items]]
+id = "mercor"
+toc = { en = "mercor", ru = "mercor", kk = "mercor" }
+heading = { en = "Mercor AI Lab — IMO and Math Research Expert / Dataset Contributor", ru = "Mercor AI Lab — эксперт по олимпиадной и научной математике / инженер данных", kk = "Mercor AI Lab — IMO және математикалық зерттеулер сарапшысы / дерек авторы" }
+place = { en = "Remote", ru = "удалённо", kk = "қашықтан" }
+dates = { en = "2025", ru = "2025", kk = "2025" }
+
+[[chapters.sections.items.bullets]]
+en = "Collected and evaluated the data to build SOTA LLM in FrontierMath benchmark."
+ru = "Собирал и оценивал данные для создания лучшей модели в рейтинге FrontierMath."
+kk = "FrontierMath рейтингіндегі ең мықты модельді құру үшін деректер жинап, олардың математикалық сапасын бағаладым."
+
+# 4.1d
+[[chapters.sections.items]]
+id = "olympiads"
+toc = { en = "math olympiads", ru = "олимпиады", kk = "олимпиадалар" }
+heading = { en = "Math Olympiads — Math Coach, Camp Organizer, Jury, Problem Setter", ru = "Математические олимпиады — тренер по математике, организатор сборов, жюри, автор задач", kk = "Математика олимпиадалары — математика жаттықтырушысы, жиын ұйымдастырушысы, қазы, есеп авторы" }
+place = { en = "Kazakhstan", ru = "Казахстан", kk = "Қазақстан" }
+dates = { en = "2021 – now", ru = "2021 – сейчас", kk = "2021 – қазір" }
+
+[[chapters.sections.items.bullets]]
+en = "Conducted multiple training camps for national IMO team."
+ru = "Проводил учебно-тренировочные сборы для участников национальной команды IMO."
+kk = "Ұлттық IMO құрамасы үшін бірнеше жаттығу жиынын өткіздім."
+
+[[chapters.sections.items.bullets]]
+en = "Trained 4 students from basic to international medalist level."
+ru = "Подготовил 4 учеников с базового уровня до уровня международных медалистов."
+kk = "4 оқушыны бастапқы деңгейден халықаралық медаль деңгейіне дейін дайындадым."
+
+[[chapters.sections.items.bullets]]
+en = "Jury and Organizer at 20+ Regional, National and International Olympiads."
+ru = "Жюри и организатор на 20+ региональных, республиканских и международных олимпиадах."
+kk = "20-дан астам аймақтық, республикалық және халықаралық олимпиадада қазы әрі ұйымдастырушы болдым."
+
+
+# ── 4.2 academic experience ──────────────────────────────────────────────────
+#  Одна запись может держать несколько должностей: [[...items.roles]] — общий
+#  заголовок организации, а под ним по блоку на должность. В оглавление
+#  попадают именно должности.
+[[chapters.sections]]
+id = "academic"
+type = "entries"
+title = { en = "academic experience", ru = "академический опыт", kk = "академиялық тәжірибе" }
+
+# 4.2a–c
+[[chapters.sections.items]]
+id = "nu-academic"
+toc = { en = "TA / RA", ru = "TA / RA", kk = "TA / RA" }
+heading = { en = "Nazarbayev University", ru = "Nazarbayev University", kk = "Nazarbayev University" }
+place = { en = "Astana, Kazakhstan", ru = "Астана, Казахстан", kk = "Астана, Қазақстан" }
+dates = { en = "2024 – 2026", ru = "2024 – 2026", kk = "2024 – 2026" }
+
+[[chapters.sections.items.roles]]
+id = "ta-micro"
+toc = { en = "microeconomics ta", ru = "ассистент по микроэкономике", kk = "микроэкономика көмекшісі" }
+title = { en = "Microeconomics TA (Teaching Assistant)", ru = "ассистент преподавателя по микроэкономике", kk = "микроэкономика бойынша оқытушы көмекшісі" }
+dates = { en = "Fall 2024", ru = "осень 2024", kk = "күз 2024" }
+
+[[chapters.sections.items.roles.bullets]]
+en = "Led tutorials and helped students prepare for the exams."
+ru = "Вёл семинары и помогал студентам готовиться к экзаменам."
+kk = "Семинарлар жүргізіп, студенттердің емтиханға дайындалуына көмектестім."
+
+[[chapters.sections.items.roles]]
+id = "ra"
+toc = { en = "math ra", ru = "научный ассистент", kk = "ғылыми көмекші" }
+title = { en = "Math RA (Research Assistant)", ru = "научный ассистент по математике", kk = "математика бойынша ғылыми көмекші" }
+dates = { en = "Fall 2025", ru = "осень 2025", kk = "күз 2025" }
+
+[[chapters.sections.items.roles.bullets]]
+en = "Worked with professors Rustem Takhanov and Zhenisbek Assylbekov on distributions fit tests. Generated sample distributions for measuring performance of the tests."
+ru = "Работал с профессорами Рустемом Тахановым и Женисбеком Асылбековым над критериями соответствия распределений. Создавал тестовые распределения для оценки критериев."
+kk = "Рустем Таханов және Жеңісбек Асылбеков профессорлармен бірге үлестірімдердің келісім критерийлері бойынша жұмыс істедім. Критерийлердің қуатын өлшеу үшін таңдамалы үлестірімдерді құрадым."
+
+[[chapters.sections.items.roles]]
+id = "thesis"
+toc = { en = "undergraduate researcher", ru = "исследователь", kk = "зерттеуші" }
+title = { en = "Undergraduate Researcher", ru = "исследователь", kk = "бакалавриат зерттеушісі" }
+dates = { en = "Spring 2026", ru = "весна 2026", kk = "көктем 2026" }
+
+[[chapters.sections.items.roles.bullets]]
+en = "Worked under supervision of professor Adilbek Kairzhan on undergraduate thesis on dispersive PDEs."
+ru = "Работал под руководством профессора Адильбека Каиржана над дипломной работой по дисперсионным уравнениям в частных производных."
+kk = "Профессор Адильбек Каиржанның жетекшілігімен дисперсиялық дербес туындылы теңдеулер бойынша дипломдық жұмыс жаздым."
+
+# 4.2d
+[[chapters.sections.items]]
+id = "flt"
+toc = { en = "flt workshop", ru = "практикум FLT", kk = "FLT практикумы" }
+heading = { en = "Imperial College London — Math (LEAN) Formalization Expert", ru = "Imperial College London — эксперт по формализации математики (LEAN)", kk = "Imperial College London — математиканы формализациялау сарапшысы (LEAN)" }
+place = { en = "London, UK", ru = "Лондон, Великобритания", kk = "Лондон, Ұлыбритания" }
+dates = { en = "July 2026", ru = "июль 2026", kk = "шілде 2026" }
+
+[[chapters.sections.items.bullets]]
+en = "Attended formalize FLT workshop hosted by Kevin Buzzard. Formalized representation theory."
+ru = "Участвовал в практикуме по формализации великой теоремы Ферма под руководством Кевина Баззарда. Формализовал теорию представлений."
+kk = "Кевин Баззард өткізген Ферманың ұлы теоремасын формализациялау практикумына қатыстым. Репрезентациялар теориясын формализацияладым."
+
+
+# ── 4.3 other experience ─────────────────────────────────────────────────────
+[[chapters.sections]]
+id = "other"
+type = "entries"
+toc_items = false                   # в оглавлении только сам раздел
+title = { en = "other experience", ru = "прочий опыт", kk = "басқа тәжірибе" }
+
+# 4.3a
+[[chapters.sections.items]]
+id = "siam"
+toc = { en = "nu siam", ru = "nu siam", kk = "nu siam" }
+heading = { en = "NU SIAM — Member & Math Representative", ru = "NU SIAM — участник и представитель матфака", kk = "NU SIAM — мүше және математика өкілі" }
+place = { en = "Astana, Kazakhstan", ru = "Астана, Казахстан", kk = "Астана, Қазақстан" }
+dates = { en = "2022 – 2026", ru = "2022 – 2026", kk = "2022 – 2026" }
+
+[[chapters.sections.items.bullets]]
+en = "Organized math talks and competitions, including the Integration Bee, and represented mathematics students in faculty discussions."
+ru = "Организовывал математические доклады и соревнования, в том числе Integration Bee, представлял студентов-математиков на факультетских обсуждениях."
+kk = "Математикалық баяндамалар мен жарыстар ұйымдастырдым, соның ішінде Integration Bee, факультет талқылауларында математика студенттерінің атынан сөйледім."
+
+[[chapters.sections.items.bullets]]
+en = "Founded and run a Telegram academic channel with 1000+ subscribers."
+ru = "Создал и веду академический Telegram-канал с 1000+ подписчиков."
+kk = "1000-нан астам жазылушысы бар академиялық Telegram арнасын құрдым және жүргіземін."
+
+# 4.3b
+[[chapters.sections.items]]
+id = "isaac"
+toc = { en = "isaac congress", ru = "конгресс ISAAC", kk = "ISAAC конгресі" }
+heading = { en = "15th ISAAC Congress — Volunteer", ru = "15-й конгресс ISAAC — волонтёр", kk = "15-ші ISAAC конгресі — ерікті" }
+place = { en = "Astana, Kazakhstan", ru = "Астана, Казахстан", kk = "Астана, Қазақстан" }
+dates = { en = "August 2025", ru = "август 2025", kk = "тамыз 2025" }
+
+[[chapters.sections.items.bullets]]
+en = "Guided international guests, hosted interviews, organized and attended seminars."
+ru = "Сопровождал иностранных гостей, вёл интервью, организовывал и посещал семинары."
+kk = "Шетелдік қонақтарды алып жүрдім, сұхбаттар жүргіздім, семинарлар ұйымдастырып, оларға қатыстым."
+
+
+# ── 4.4 selected coursework ──────────────────────────────────────────────────
+#  Две колонки: математика слева, остальное справа. В правой между блоками
+#  с разным кодом (CSCI → ECON → CHEM → MINE) вставляется пустая строка.
+[[chapters.sections]]
+id = "coursework"
+type = "list"
+title = { en = "selected coursework", ru = "избранные курсы", kk = "таңдаулы курстар" }
+
+[[chapters.sections.groups]]
+items = [
+  { en = "MATH 417 — Cryptography", ru = "MATH 417 — криптография", kk = "MATH 417 — криптография" },
+  { en = "MATH 456 — Lie Groups and Representations", ru = "MATH 456 — группы Ли и представления", kk = "MATH 456 — Ли топтары және өкілдіктер" },
+  { en = "MATH 462 — Advanced Linear Algebra", ru = "MATH 462 — продвинутая линейная алгебра", kk = "MATH 462 — жоғары деңгейлі сызықтық алгебра" },
+  { en = "MATH 465 — Differential Geometry", ru = "MATH 465 — дифференциальная геометрия", kk = "MATH 465 — дифференциалдық геометрия" },
+  { en = "MATH 480 — Complex Analysis", ru = "MATH 480 — комплексный анализ", kk = "MATH 480 — комплекстік талдау" },
+  { en = "MATH 481 — PDE", ru = "MATH 481 — PDE", kk = "MATH 481 — PDE" },
+  { en = "MATH 499 — Bachelor's Thesis", ru = "MATH 499 — дипломная работа", kk = "MATH 499 — дипломдық жұмыс" },
+  { en = "MATH 510 — Measure Theory", ru = "MATH 510 — теория меры", kk = "MATH 510 — өлшемдер теориясы" },
+  { en = "MATH 602 — Analytical NT", ru = "MATH 602 — аналитическая теория чисел", kk = "MATH 602 — аналитикалық сандар теориясы" },
+  { en = "MATH 682 — Functional Analysis", ru = "MATH 682 — функциональный анализ", kk = "MATH 682 — функционалдық талдау" },
+]
+
+[[chapters.sections.groups]]
+space_on_code_change = true
+items = [
+  { en = "CSCI 371 — Advanced Algorithms", ru = "CSCI 371 — продвинутые алгоритмы", kk = "CSCI 371 — жоғары деңгейлі алгоритмдер" },
+  { en = "CSCI 390 — AI", ru = "CSCI 390 — ИИ", kk = "CSCI 390 — ЖИ" },
+  { en = "CSCI 594 — DL", ru = "CSCI 594 — глубокое обучение", kk = "CSCI 594 — терең оқыту" },
+  { en = "ECON 498 — General Equilibrium", ru = "ECON 498 — общее равновесие", kk = "ECON 498 — жалпы тепе-теңдік" },
+  { en = "CHEM 211 — Organic Chemistry I", ru = "CHEM 211 — органическая химия I", kk = "CHEM 211 — органикалық химия I" },
+  { en = "CHEM 250 — Descriptive Inorganic Chemistry", ru = "CHEM 250 — описательная неорганическая химия", kk = "CHEM 250 — дескриптивті бейорганикалық химия" },
+  { en = "MINE 402 — Coal Mining", ru = "MINE 402 — добыча угля", kk = "MINE 402 — көмір өндіру" },
+]
+
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+#  АРХИВ — текст, который не попал в новую структуру оглавления.
+#  Нигде не рендерится. Лежит здесь, чтобы не потерялся.
+# ═════════════════════════════════════════════════════════════════════════════
+[archive]
+about_1 = "I do mathematics and machine learning. My background is competitive mathematics — IMO 2021 bronze, APMO and Balkan MO medals — and I have spent the last four years on both sides of that world: as a contestant, and as a coach, problem setter and jury member for the Kazakhstani national team."
+about_2 = "On the engineering side I have shipped production computer-vision models at a generative-AI company, and contributed research-grade mathematics to frontier LLM evaluation datasets. I am most interested in the places where the two meet: reasoning, evaluation, and the theory behind modern generative models."
+skills_languages = "C++, Python, SQL, LaTeX"
+skills_ml = "PyTorch, dataset construction, evaluation design"
+skills_infra = "AWS, Docker, BigQuery, Grafana"
+skills_other = "Excel, Apify, Instantly"
+hobby_cp = "Competitive programming — Codeforces ~1600"
+hobby_chess = "Chess — ~1700 blitz/rapid"
+hobby_other = "Piano, table tennis"

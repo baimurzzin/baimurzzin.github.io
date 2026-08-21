@@ -1,0 +1,53 @@
+name: build
+
+# Rebuilds the site from content.toml and cv/cv-en.pdf from cv/cv-en.tex,
+# then commits whatever changed — so what GitHub Pages serves always matches
+# the sources in this repo.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content.toml"
+      - "build.py"
+      - "cv/cv-en.tex"
+      - "cv/cv-ru.tex"
+      - "cv/cv-kk.tex"
+      - ".github/workflows/build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tectonic
+        run: |
+          curl -fsSL https://drop-sh.fullyjustified.net | sh
+          sudo mv tectonic /usr/local/bin/
+
+      - name: Build PDFs
+        run: cd cv && tectonic cv-en.tex && tectonic cv-ru.tex && tectonic cv-kk.tex
+
+      - name: Render site
+        run: python3 build.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "nothing changed"
+          else
+            git add -A
+            git commit -m "build: regenerate site and cv.pdf"
+            git push
+          fi

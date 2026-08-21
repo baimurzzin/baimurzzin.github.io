@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rakhim Baimurzin</title>
+<meta name="description" content="Rakhim Baimurzin — mathematician and programmer. CV, honors, research and contacts.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101211" media="(prefers-color-scheme: dark)">
+<link rel="alternate" hreflang="en" href="./">
+<link rel="alternate" hreflang="ru" href="ru/">
+<link rel="alternate" hreflang="kk" href="kk/">
+<link rel="alternate" hreflang="x-default" href="./">
+<link rel="stylesheet" href="fonts/press-start-2p.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13' font-family='monospace'>R</text></svg>">
+<!-- generated from content.toml by build.py — do not edit by hand -->
+<script>
+// Applied before first paint so a chosen theme never flashes the other one.
+try {
+  var th = localStorage.getItem('theme');
+  if (th === 'light' || th === 'dark') document.documentElement.setAttribute('data-theme', th);
+} catch (e) {}
+</script>
+</head>
+<body>
+
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<header class="bar">
+  <div class="bar-inner">
+    <nav class="langs" aria-label="language">
+      <ul>
+        <li><span aria-current="page">EN</span></li>
+        <li><a href="ru/" hreflang="ru" lang="ru" title="Русский">RU</a></li>
+        <li><a href="kk/" hreflang="kk" lang="kk" title="Қазақша">KK</a></li>
+      </ul>
+    </nav>
+    <div class="controls">
+      <button type="button" id="font-btn" class="ctl ctl-btn"
+              aria-label="font">
+        <svg class="icon icon-a-round" viewBox="0 0 7 7" aria-hidden="true">
+          <!-- smooth 'A' — shown while the pixel face is on -->
+          <path d="M3.5 1c-.52 0-.94.32-1.11.82L1 6h1.06l.46-1.4h1.96L4.94 6H6L4.61 1.82C4.44 1.32 4.02 1 3.5 1zm0 1.15.63 1.62H2.87z"/>
+        </svg>
+        <svg class="icon icon-a-pixel" viewBox="0 0 7 7" aria-hidden="true">
+          <!-- pixel 'A' — shown while the smooth face is on -->
+          <path d="M2 1h3v1H2zM1 2h1v5H1zM5 2h1v5H5zM2 4h3v1H2z"/>
+        </svg>
+      </button>
+      <button type="button" id="bg-btn" class="ctl ctl-btn"
+              aria-label="background" aria-pressed="true">
+        <canvas id="bg-icon" width="13" height="13" aria-hidden="true"></canvas>
+      </button>
+      <button type="button" id="theme-btn" class="ctl ctl-btn"
+              aria-label="theme">
+        <svg class="icon icon-sun" viewBox="0 0 9 9" aria-hidden="true">
+          <!-- pixel sun -->
+          <path d="M3 3h3v3H3zM4 0h1v2H4zM4 7h1v2H4zM0 4h2v1H0zM7 4h2v1H7zM1 1h1v1H1zM7 1h1v1H7zM1 7h1v1H1zM7 7h1v1H7z"/>
+        </svg>
+        <svg class="icon icon-moon" viewBox="0 0 9 9" aria-hidden="true">
+          <!-- pixel crescent -->
+          <path d="M3 1h3v1H3zM2 2h1v1H2zM1 3h1v3H1zM2 6h1v1H2zM3 7h3v1H3zM6 6h1v1H6zM4 2h3v1H4zM3 3h2v3H3zM4 6h3v1H4z" fill-opacity="0"/>
+          <path d="M5 0a4.5 4.5 0 1 0 3 8 5 5 0 0 1-3-8z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+<nav class="toc" id="toc" aria-label="Contents">
+  <details id="toc-details">
+    <summary>Contents</summary>
+    <ul>
+      <li class="d1"><a href="#profile"><span class="n">1</span> <span class="l">Rakhim Baimurzin</span></a></li>
+      <li class="d2"><a href="#about"><span class="n">1.1</span> <span class="l">about</span></a></li>
+      <li class="d2"><a href="#links"><span class="n">1.2</span> <span class="l">links</span></a></li>
+      <li class="d1"><a href="#honors"><span class="n">2</span> <span class="l">Honors and awards</span></a></li>
+      <li class="d2"><a href="#honors-math"><span class="n">2.1</span> <span class="l">math and programming</span></a></li>
+      <li class="d2"><a href="#honors-other"><span class="n">2.2</span> <span class="l">others</span></a></li>
+      <li class="d1"><a href="#education"><span class="n">3</span> <span class="l">Education</span></a></li>
+      <li class="d2"><a href="#masters"><span class="n">3.1</span> <span class="l">masters</span></a></li>
+      <li class="d2"><a href="#bachelors"><span class="n">3.2</span> <span class="l">bachelors</span></a></li>
+      <li class="d2"><a href="#highschool"><span class="n">3.3</span> <span class="l">highschool</span></a></li>
+      <li class="d1"><a href="#experience"><span class="n">4</span> <span class="l">Experience</span></a></li>
+      <li class="d2"><a href="#work"><span class="n">4.1</span> <span class="l">work experience</span></a></li>
+      <li class="d3"><a href="#desargues"><span class="n">4.1a</span> <span class="l">desargues ai</span></a></li>
+      <li class="d3"><a href="#higgsfield"><span class="n">4.1b</span> <span class="l">higgsfield ai</span></a></li>
+      <li class="d3"><a href="#mercor"><span class="n">4.1c</span> <span class="l">mercor</span></a></li>
+      <li class="d3"><a href="#olympiads"><span class="n">4.1d</span> <span class="l">math olympiads</span></a></li>
+      <li class="d2"><a href="#academic"><span class="n">4.2</span> <span class="l">academic experience</span></a></li>
+      <li class="d3"><a href="#nu-academic"><span class="n">4.2a</span> <span class="l">TA / RA</span></a></li>
+      <li class="d3"><a href="#flt"><span class="n">4.2b</span> <span class="l">flt workshop</span></a></li>
+      <li class="d2"><a href="#other"><span class="n">4.3</span> <span class="l">other experience</span></a></li>
+      <li class="d2"><a href="#coursework"><span class="n">4.4</span> <span class="l">selected coursework</span></a></li>
+    </ul>
+  </details>
+</nav>
+
+<main>
+
+<section class="chapter" id="profile">
+  <div class="head">
+    <h1><span class="n">1</span> Rakhim Baimurzin</h1>
+    <p class="subtitle">[Mathematician / Programmer]</p>
+  </div>
+  <section class="sub" id="about">
+    <h3><span class="n">1.1</span> about</h3>
+    <p>hey! my name is Rakhim and i&#x27;m from the industrial city of <strong><span class="ac ac-past">Karaganda</span></strong>. currently i am located in <strong><span class="ac ac-here">Astana, Kazakhstan</span></strong>. i speak english, russian and kazakh. i am an IMO medalist, and i do a bit of AI/ML, a little bit of programming, and a tiny bit of research math.</p>
+  </section>
+  <section class="sub" id="links">
+    <h3><span class="n">1.2</span> links</h3>
+    <ul class="links">
+      <li><a href="cv/cv-en.pdf">cv.pdf</a></li>
+      <li><a href="https://t.me/baimurzzin" class="lk lk-telegram">telegram</a></li>
+      <li><a href="https://www.linkedin.com/in/baimurzzin" class="lk lk-linkedin">linkedin</a></li>
+      <li><a href="https://github.com/baimurzzin">github</a></li>
+    </ul>
+  </section>
+</section>
+
+<section class="chapter" id="honors">
+  <h2><span class="n">2</span> Honors and awards</h2>
+  <section class="sub" id="honors-math">
+    <h3><span class="n">2.1</span> math and programming</h3>
+    <ul class="plain">
+      <li class="has-sub">
+        <span class="lead" tabindex="0" role="button" aria-expanded="false"><span class="label">IMO 2021 — <span class="medal m-bronze">bronze</span></span><span class="cue" aria-hidden="true"></span></span>
+        <div class="sub-wrap"><ul>
+          <li>Kazakhstan National MO 2021 — <span class="medal m-silver">silver</span></li>
+          <li>Kazakhstan National MO 2022 — <span class="medal m-silver">silver</span></li>
+        </ul></div>
+      </li>
+      <li>Balkan MO 2021 — <span class="medal m-bronze">bronze</span></li>
+      <li>IZhO 2021 — <span class="medal m-silver">silver</span></li>
+      <li>APMO 2022 — <span class="medal m-bronze">bronze</span></li>
+      <li class="has-sub">
+        <span class="lead" tabindex="0" role="button" aria-expanded="false"><span class="label">ICPC NEF (semifinals) 2025 — <span class="medal m-hm">honorable mention</span></span><span class="cue" aria-hidden="true"></span></span>
+        <div class="sub-wrap"><ul>
+          <li>ICPC Kazakhstan Regional Contest (quarterfinals) 2025 — <span class="medal m-gold">diploma of the I degree</span></li>
+          <li>ICPC Kazakhstan Regional Contest (quarterfinals) 2024 — <span class="medal m-silver">diploma of the II degree</span></li>
+        </ul></div>
+      </li>
+      <li class="has-sub">
+        <span class="lead" tabindex="0" role="button" aria-expanded="false"><span class="label">IMC 2026 — <span class="medal m-silver">silver</span></span><span class="cue" aria-hidden="true"></span></span>
+        <div class="sub-wrap"><ul>
+          <li>National Student MO 2026 — <span class="medal m-gold">grand prize, absolute winner (1/44)</span></li>
+          <li>National Student MO 2025 — <span class="medal m-silver">silver</span></li>
+        </ul></div>
+      </li>
+    </ul>
+  </section>
+  <section class="sub" id="honors-other">
+    <h3><span class="n">2.2</span> others</h3>
+    <ul class="plain">
+      <li>Kazakhstan National Scientific Fair 2022 — <span class="medal m-bronze">bronze</span></li>
+      <li class="has-sub">
+        <span class="lead" tabindex="0" role="button" aria-expanded="false"><span class="label">MBZUAI K2 Think International Hackathon 2025 — <span class="medal m-gold">absolute winner (1/900)</span></span><span class="cue" aria-hidden="true"></span></span>
+        <div class="sub-wrap"><ul>
+          <li>among the 16 onsite finalists were teams from the Ivy League, MIT and DeepMind</li>
+        </ul></div>
+      </li>
+      <li>KAIST E5 Global Start-up Fair 2026 — <span class="medal m-silver">second place (2/40)</span></li>
+    </ul>
+  </section>
+</section>
+
+<section class="chapter" id="education">
+  <h2><span class="n">3</span> Education</h2>
+  <section class="sub" id="masters">
+    <h3><span class="n">3.1</span> masters</h3>
+    <div class="entry" id="masters-1">
+      <h4><span class="ac ac-org">Nazarbayev University</span></h4>
+      <p class="meta"><span class="role">MSc in Applied Mathematics</span><span>2026 – 2028</span></p>
+    </div>
+  </section>
+  <section class="sub" id="bachelors">
+    <h3><span class="n">3.2</span> bachelors</h3>
+    <div class="entry" id="bachelors-1">
+      <h4><span class="ac ac-org">Nazarbayev University</span></h4>
+      <p class="meta"><span class="role">BSc in Mathematics — GPA = π + ε (ε ≈ 0.07)</span><span>2022 – 2026</span></p>
+    </div>
+  </section>
+  <section class="sub" id="highschool">
+    <h3><span class="n">3.3</span> highschool</h3>
+    <div class="entry" id="highschool-1">
+      <h4><span class="ac ac-nis">Nazarbayev Intellectual School</span>, <span class="ac ac-past">Karaganda</span></h4>
+      <p class="meta"><span class="role">High School Diploma — GPA 3.75, UNT 138/140</span><span>2016 – 2022</span></p>
+      <ul>
+        <li>First ISO medalist in the school&#x27;s history.</li>
+      </ul>
+    </div>
+  </section>
+</section>
+
+<section class="chapter" id="experience">
+  <h2><span class="n">4</span> Experience</h2>
+  <section class="sub" id="work">
+    <h3><span class="n">4.1</span> work experience</h3>
+    <div class="entry" id="desargues">
+      <h4><span class="ac ac-past">Desargues AI</span> — Co-Founder</h4>
+      <p class="meta"><span class="role">Astana, Kazakhstan</span><span>Feb 2026 – now</span></p>
+      <ul>
+        <li>Building VMI/MSI (Verifiable Math Intelligence / Math Super Intelligence).</li>
+      </ul>
+    </div>
+    <div class="entry" id="higgsfield">
+      <h4><span class="ac ac-hf">Higgsfield AI</span> — ML Engineer</h4>
+      <p class="meta"><span class="role">Almaty, Kazakhstan</span><span>Sep 2025 – Feb 2026</span></p>
+      <ul>
+        <li>Collected datasets and built production image classifiers for AI and real imagery.</li>
+      </ul>
+    </div>
+    <div class="entry" id="mercor">
+      <h4><span class="ac ac-mercor">Mercor AI Lab</span> — IMO and Math Research Expert / Dataset Contributor</h4>
+      <p class="meta"><span class="role">Remote</span><span>2025</span></p>
+      <ul>
+        <li>Collected and evaluated the data to build SOTA LLM in FrontierMath benchmark.</li>
+      </ul>
+    </div>
+    <div class="entry" id="olympiads">
+      <h4>Math Olympiads — Math Coach, Camp Organizer, Jury, Problem Setter</h4>
+      <p class="meta"><span class="role">Kazakhstan</span><span>2021 – now</span></p>
+      <ul>
+        <li>Conducted multiple training camps for national IMO team.</li>
+        <li>Trained 4 students from basic to international medalist level.</li>
+        <li>Jury and Organizer at 20+ Regional, National and International Olympiads.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="sub" id="academic">
+    <h3><span class="n">4.2</span> academic experience</h3>
+    <div class="entry" id="nu-academic">
+      <h4><span class="ac ac-org">Nazarbayev University</span></h4>
+      <p class="meta"><span class="role">Astana, Kazakhstan</span><span>2024 – 2026</span></p>
+      <div class="role-block" id="ta-micro">
+        <p class="role-line"><span class="name">Microeconomics TA (Teaching Assistant)</span><span>Fall 2024</span></p>
+        <ul>
+          <li>Led tutorials and helped students prepare for the exams.</li>
+        </ul>
+      </div>
+      <div class="role-block" id="ra">
+        <p class="role-line"><span class="name">Math RA (Research Assistant)</span><span>Fall 2025</span></p>
+        <ul>
+          <li>Worked with professors Rustem Takhanov and Zhenisbek Assylbekov on distributions fit tests. Generated sample distributions for measuring performance of the tests.</li>
+        </ul>
+      </div>
+      <div class="role-block" id="thesis">
+        <p class="role-line"><span class="name">Undergraduate Researcher</span><span>Spring 2026</span></p>
+        <ul>
+          <li>Worked under supervision of professor Adilbek Kairzhan on undergraduate thesis on dispersive PDEs.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="entry" id="flt">
+      <h4><span class="ac ac-icl">Imperial College London</span> — Math (LEAN) Formalization Expert</h4>
+      <p class="meta"><span class="role">London, UK</span><span>July 2026</span></p>
+      <ul>
+        <li>Attended formalize FLT workshop hosted by Kevin Buzzard. Formalized representation theory.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="sub" id="other">
+    <h3><span class="n">4.3</span> other experience</h3>
+    <div class="entry" id="siam">
+      <h4><span class="ac ac-siam">NU SIAM</span> — Member &amp; Math Representative</h4>
+      <p class="meta"><span class="role">Astana, Kazakhstan</span><span>2022 – 2026</span></p>
+      <ul>
+        <li>Organized math talks and competitions, including the Integration Bee, and represented mathematics students in faculty discussions.</li>
+        <li>Founded and run a Telegram academic channel with 1000+ subscribers.</li>
+      </ul>
+    </div>
+    <div class="entry" id="isaac">
+      <h4>15th ISAAC Congress — Volunteer</h4>
+      <p class="meta"><span class="role">Astana, Kazakhstan</span><span>August 2025</span></p>
+      <ul>
+        <li>Guided international guests, hosted interviews, organized and attended seminars.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="sub" id="coursework">
+    <h3><span class="n">4.4</span> selected coursework</h3>
+    <div class="cols">
+    <ul class="plain">
+      <li>MATH 417 — Cryptography</li>
+      <li>MATH 456 — Lie Groups and Representations</li>
+      <li>MATH 462 — Advanced Linear Algebra</li>
+      <li>MATH 465 — Differential Geometry</li>
+      <li>MATH 480 — Complex Analysis</li>
+      <li>MATH 481 — PDE</li>
+      <li>MATH 499 — Bachelor&#x27;s Thesis</li>
+      <li>MATH 510 — Measure Theory</li>
+      <li>MATH 602 — Analytical NT</li>
+      <li>MATH 682 — Functional Analysis</li>
+    </ul>
+    <ul class="plain">
+      <li>CSCI 371 — Advanced Algorithms</li>
+      <li>CSCI 390 — AI</li>
+      <li>CSCI 594 — DL</li>
+      <li class="gap">ECON 498 — General Equilibrium</li>
+      <li class="gap">CHEM 211 — Organic Chemistry I</li>
+      <li>CHEM 250 — Descriptive Inorganic Chemistry</li>
+      <li class="gap">MINE 402 — Coal Mining</li>
+    </ul>
+    </div>
+  </section>
+</section>
+
+</main>
+</div>
+
+<script src="site.js"></script>
+<script data-goatcounter="https://baimurzzin.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

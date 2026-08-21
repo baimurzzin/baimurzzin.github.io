@@ -1,0 +1,263 @@
+%-------------------------
+% LaTeX-тегі түйіндеме
+% Авторы : Рахим Баймурзин үшін бейімделген
+% Құрастыру: tectonic cv-kk.tex   (немесе)  xelatex cv-kk.tex
+%            Unicode қолдайтын қозғалтқыш қажет (XeTeX/LuaTeX).
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage{array}
+\usepackage{iftex}
+
+% Computer Modern Unicode — шрифт суреті сол күйде, бірақ кириллицасы бар.
+\usepackage{fontspec}
+\setmainfont{cmunrm.otf}[
+  BoldFont          = cmunbx.otf,
+  ItalicFont        = cmunti.otf,
+  BoldItalicFont    = cmunbi.otf,
+  SmallCapsFont     = cmunrm.otf,
+  SmallCapsFeatures = {Letters=SmallCaps},
+]
+
+% Қазақ тілінің тасымал үлгілері жоқ, сондықтан орыс тілінің үлгілері қолданылады.
+\usepackage{polyglossia}
+\setmainlanguage{russian}
+\setotherlanguage{english}
+
+% Тегтелген PDF глиф картасы: тек pdfTeX үшін, XeTeX/LuaTeX-те өткізіліп жіберіледі.
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Түйіндеме макростары
+%-------------------------
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  ТҮЙІНДЕМЕ ОСЫ ЖЕРДЕН БАСТАЛАДЫ  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Рахим Баймурзин} \\
+    Қазақстан $|$
+    \href{mailto:baimurzzin@gmail.com}{\underline{baimurzzin@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/baimurzzin/}{\underline{linkedin}} $|$
+    tg: @baimurzzin
+\end{center}
+
+%-----------БІЛІМ-----------
+\section{Білім}
+\resumeSubHeadingListStart
+  % \resumeSubheading
+  %   {Назарбаев Зияткерлік мектебі (НЗМ)}{Қарағанды, Қазақстан}
+  %   {Орта білім аттестаты, GPA 3.75, ҰБТ 138/140, мектеп тарихындағы алғашқы ISO медалисі}{2016 -- 2022}
+  \resumeSubheading
+    {Назарбаев Университеті}{Астана, Қазақстан}
+    {Қолданбалы математика магистрі}{2026 -- 2028}
+  \resumeSubheading
+    {Назарбаев Университеті}{Астана, Қазақстан}
+    {Математика бакалавры, GPA 3.21}{2022 -- 2026}
+\resumeSubHeadingListEnd
+
+%-----------МАРАПАТТАР-----------
+\section{Марапаттар мен жетістіктер}
+\resumeSubHeadingListStart
+  \item{\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.45\textwidth}@{\hspace{0.05\textwidth}}>{\raggedright\arraybackslash}p{0.45\textwidth}@{}}
+    \textbf{IMO 2021 -- қола}                       & \textbf{ICPC (NEF), аймақтық финалист}                \\
+    IMC 2026 -- күміс                               & Республикалық студенттік МО 2026 (1/50)       \\
+    MBZUAI K2 Think Хакатон, жеңімпаз (1/900)   & KAIST E5 Global Стартап Көрмесі (2/40)
+  \end{tabular}}
+\resumeSubHeadingListEnd
+
+%-----------ЖҰМЫС ТӘЖІРИБЕСІ-----------
+\section{Жұмыс тәжірибесі}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Desargues AI}{Астана, Қазақстан}
+    {Құрылтайшы}{ақп 2026 -- қазір}
+    \resumeItemListStart
+      \resumeItem{Жасанды математикалық суперинтеллект жасап жатырмын.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Higgsfield AI}{Алматы, Қазақстан}
+    {ML инженері}{қыр 2025 -- ақп 2026}
+    \resumeItemListStart
+      \resumeItem{Датасеттер жинап, ЖИ жасаған және нақты кескіндерді ажырататын, recall көрсеткіші жоғары өнімдік классификаторлар жасадым.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Mercor AI Lab}{Қашықтан}
+    {IMO және математикалық зерттеулер сарапшысы / дерек авторы}{2025}
+    \resumeItemListStart
+      \resumeItem{FrontierMath рейтингіндегі ең мықты модельді құру үшін деректер жинап, олардың математикалық сапасын бағаладым.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Математика олимпиадалары}{Қазақстан}
+    {Математика жаттықтырушысы, жиын ұйымдастырушысы, қазы, есеп авторы}{2021 -- қазір}
+    \resumeItemListStart
+      \resumeItem{Ұлттық IMO құрамасы үшін бірнеше жаттығу жиынын өткіздім.}
+      \resumeItem{4 оқушыны бастапқы деңгейден халықаралық медаль деңгейіне дейін дайындадым.}
+      \resumeItem{20-дан астам аймақтық, республикалық және халықаралық олимпиадада қазы әрі ұйымдастырушы болдым.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------АКАДЕМИЯЛЫҚ ТӘЖІРИБЕ-----------
+\section{Академиялық тәжірибе}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Назарбаев Университеті}{Астана, Қазақстан}
+    {Микроэкономика бойынша оқытушы көмекшісі}{күз 2024}
+    \resumeItemListStart
+      \resumeItem{Семинарлар жүргізіп, студенттердің емтиханға дайындалуына көмектестім.}
+    \resumeItemListEnd
+
+  \vspace{-18pt}
+
+  \resumeSubheading
+    {}{}
+    {Математика бойынша ғылыми көмекші}{күз 2025}
+    \resumeItemListStart
+      \resumeItem{Рустем Таханов және Жеңісбек Асылбеков профессорлармен бірге үлестірімдердің келісім критерийлері бойынша жұмыс істедім. Критерийлердің қуатын өлшеу үшін таңдамалы үлестірімдерді құрадым.}
+    \resumeItemListEnd
+
+  \vspace{-18pt}
+
+  \resumeSubheading
+    {}{}
+    {Бакалавриат зерттеушісі}{көктем 2026}
+    \resumeItemListStart
+      \resumeItem{Профессор Адильбек Каиржанның жетекшілігімен дисперсиялық дербес туындылы теңдеулер бойынша дипломдық жұмыс жаздым.}
+    \resumeItemListEnd
+
+  \vspace{-18pt}
+
+  \resumeSubheading
+    {}{}
+    {15-ші ISAAC конгресінің еріктісі}{тамыз 2025}
+    \resumeItemListStart
+      \resumeItem{Шетелдік қонақтарды алып жүрдім, сұхбаттар жүргіздім, семинарлар ұйымдастырып, оларға қатыстым.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Imperial College London}{Лондон, Ұлыбритания}
+    {Математиканы формализациялау сарапшысы (LEAN)}{шілде 2026}
+    \resumeItemListStart
+      \resumeItem{Кевин Баззард өткізген Ферманың ұлы теоремасын формализациялау практикумына қатыстым. Репрезентациялар теориясын формализацияладым.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% %-----------ЕРІКТІЛІК ТӘЖІРИБЕСІ-----------
+% \section{Еріктілік тәжірибесі}
+% \resumeSubHeadingListStart
+%
+%   \resumeSubheading
+%     {NU SIAM Student Chapter}{Астана, Қазақстан}
+%     {Мүше және математика өкілі}{2022 -- 2026}
+%     \resumeItemListStart
+%       \resumeItem{Математикалық баяндамалар, жарыстар (мысалы, Integration Bee) ұйымдастырдым және факультет талқылауларында математика студенттерінің атынан сөйледім.}
+%       \resumeItem{1000-нан астам жазылушысы бар академиялық Telegram арнасын құрып, жүргіздім.}
+%     \resumeItemListEnd
+%
+% \resumeSubHeadingListEnd
+
+%-----------КУРСТАР-----------
+% \section{Тиісті курстар}
+% \resumeSubHeadingListStart
+%   \item{\begin{tabular}{@{}p{0.48\textwidth} p{0.48\textwidth}@{}}
+%     MATH 465: дифференциалдық геометрия & MATH 481: дербес туындылы теңдеулер \\
+%     MATH 510: өлшемдер теориясы          & MATH 602: аналитикалық сандар теориясы \\
+%     MATH 682: функционалдық талдау       & CSCI 371: алгоритмдер II              \\
+%     CSCI 694: терең оқыту                & ECON 498: жалпы тепе-теңдік           \\
+%     CHEM 211: органикалық химия          & MINE 402: көмір өндіру
+%   \end{tabular}}
+% \resumeSubHeadingListEnd
+
+\begin{comment}
+%-----------ЖОБАЛАР-----------
+\section{Жобалар}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Тері обырын анықтау}}{\textit{күз 2025}}
+    \resumeItemListStart
+      \resumeItem{Медициналық кескіндер бойынша тері обырын анықтайтын CNN негізіндегі модель жасадым.}
+      \resumeItem{Терең оқытудың медициналық диагностикадағы қолданысын зерттедім.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\end{comment}
+
+%-----------ДАҒДЫЛАР МЕН ҚЫЗЫҒУШЫЛЫҚТАР-----------
+\section{Басқа}
+\resumeSubHeadingListStart
+  \resumeItem{\textbf{Дағдылар:} ML, DS, GitHub, C++, Python, AWS, Docker, SQL, BigQuery, Grafana, LaTeX, Excel, Apify.}
+  % \resumeItem{\textbf{Қызығушылықтар:} спорттық бағдарламалау (Codeforces 1600), шахмат (1700 блиц/рапид), фортепиано, үстел теннисі.}
+\resumeSubHeadingListEnd
+
+\end{document}
